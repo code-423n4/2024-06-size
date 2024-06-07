@@ -90,7 +90,7 @@ All mathematical operations are implemented with explicit rounding (`mulDivUp` o
 
 Decimal amounts are preserved until a conversion is necessary:
 
-- USDC/aUSDC: 6 decimals
+- USDC/szaUSDC: 6 decimals
 - WETH/szETH: 18 decimals
 - szDebt: same as borrow token
 - Price feeds: 18 decimals
