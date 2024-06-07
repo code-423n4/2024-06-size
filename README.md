@@ -207,7 +207,7 @@ N/A
 - FEES_01: Fragmentation fees are applied whenever there is a credit fractionalization
 - FEES_02: Cash swap operations increase the fee recipient balance
 
-- DOS: Denial of Service
+- DOS: Functions should not revert if preconditions are met (Denial of Service)
 
 - REVERTS: Actions behave as expected under dependency reverts
 
