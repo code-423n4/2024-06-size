@@ -348,6 +348,12 @@ yarn echidna-property
 yarn echidna-assertion
 ```
 
+# Property-based tests
+
+```bash
+for i in {0..5}; do halmos --loop $i; done
+```
+
 ✅ SCOUTS: Please format the response above 👆 using the template below👇
 
 ```bash
