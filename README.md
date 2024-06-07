@@ -380,18 +380,16 @@ After our last security audit, we implemented numerous fixes and added new featu
    - `BorrowAsMarketOrder` was renamed to `SellCreditMarket`. Instead of receiving an array of receivable credit positions, it now accepts a `creditPositionId` parameter. If set to `RESERVED_ID`, it can create a DebtPosition/CreditPosition pair for a "simple borrow". Passing an existing credit position ID allows for a "lender exit".
    - `LendAsMarketOrder` was merged with `BuyMarketCredit` into a single `BuyCreditMarket` function. Like `SellCreditMarket`, it accepts a `creditPositionId` parameter. Setting it to `RESERVED_ID` enables the creation of a DebtPosition/CreditPosition pair for a "simple lend". Passing an existing credit position ID enables a credit buy operation.
    - `BorrowerExit` was eliminated in favor of a `BuyCreditMarket` + `Compensate` flow.
-   - `Compensate` now accepts a `creditPositionToCompensateId`. If set to `RESERVED_ID`, it can create a DebtPosition/CreditPosition pair, allowing for debt reduction on an existing loan while creating a new debt. This facilitates partial repayments.
-
-4. Periphery: Liquidation contracts to be called by the protocol's keeper bots were added after our last audit
+   - `Compensate` now accepts a `creditPositionToCompensateId` that can be set to `RESERVED_ID`, which can create a DebtPosition/CreditPosition pair, allowing for debt reduction on an existing loan while creating a new debt. This facilitates partial repayments.
 
 ## All trusted roles in the protocol
 
 | Role                                | Description                       |
 | --------------------------------------- | ---------------------------- |
-| KEEPER_ROLE                          |              |
-| PAUSER_ROLE                             |                        |
-| BORROW_RATE_UPDATER_ROLE                             |                        |
-| DEFAULT_ADMIN_ROLE                             |                        |
+| KEEPER_ROLE                          |  Liquidation bots   |
+| PAUSER_ROLE                             |  Protocol admin and monitoring services capable of pausing the protocol |
+| BORROW_RATE_UPDATER_ROLE                             |  Backend bot that performs an off-chain calculation of the Variable Pool (Aave v3) borrow rate over a certain period of time and updates the contract with the result  |
+| DEFAULT_ADMIN_ROLE                             |  Protocol admin (multisig)  |
 
 ## Describe any novel or unique curve logic or mathematical models implemented in the contracts
 
