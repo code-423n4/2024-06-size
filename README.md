@@ -42,13 +42,82 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
+Size is a credit marketplace with unified liquidity across maturities.
+
+Supported pair:
+
+- (W)ETH/USDC: Collateral/Borrow token
+
+Target networks:
+
+- Ethereum mainnet
+- Base
+
+## Documentation
+
+### Overview, Accounting, and Protocol Design
+
+- [Whitepaper](https://docs.size.cash/)
+
+### Technical overview
+
+#### Architecture
+
+The architecture of Size v2 was inspired by [dYdX v2](https://github.com/dydxprotocol/solo), with the following design goals:
+
+- Upgradeability
+- Modularity
+- Overcome [EIP-170](https://eips.ethereum.org/EIPS/eip-170)'s contract code size limit of 24kb
+- Maintaining the protocol invariants after each user interaction (["FREI-PI" pattern](https://www.nascent.xyz/idea/youre-writing-require-statements-wrong))
+
+For that purpose, the contract is deployed behind an UUPS-Upgradeable proxy, and contains a single entrypoint, `Size.sol`. External libraries are used, and a single `State storage` variable is passed to them via `delegatecall`s. All user-facing functions have the same pattern:
+
+```solidity
+state.validateFunction(params);
+state.executeFunction(params);
+state.validateInvariant(params);
+```
+
+The `Multicall` pattern is also available to allow users to perform a sequence of multiple actions, such as depositing borrow tokens, liquidating an underwater borrower, and withdrawing all liquidated collateral. **Note:** in order to accept ether deposits through multicalls, all user-facing functions have the [`payable`](https://github.com/sherlock-audit/2023-06-tokemak-judging/issues/215) modifier, and `deposit` always uses `address(this).balance` to wrap ether. This means leftover amounts, if [sent forcibly](https://consensys.github.io/smart-contract-best-practices/development-recommendations/general/force-feeding/), are always credited to the depositor.
+
+Additional safety features were employed, such as different levels of Access Control (ADMIN, PAUSER_ROLE, KEEPER_ROLE, BORROW_RATE_UPDATER_ROLE), and Pause.
+
+#### Tokens
+
+In order to address donation and reentrancy attacks, the following measures were adopted:
+
+- No withdraws of native ether, only wrapped ether (WETH)
+- Underlying borrow and collateral tokens, such as USDC and WETH, are converted 1:1 into deposit tokens via `deposit`, which mints `szaUSDC` and `szWETH`, and received back via `withdraw`, which burns deposit tokens 1:1 in exchange for the underlying tokens.
+
+#### Maths
+
+All mathematical operations are implemented with explicit rounding (`mulDivUp` or `mulDivDown`) using Solady's [FixedPointMathLib](https://github.com/Vectorized/solady/blob/main/src/utils/FixedPointMathLib.sol). Whenever a taker-maker operation occurs, all rounding tries to favor the maker, who is the passive party. In some generic situations, such as in yield curve calculations, the rounding is always in one direction.
+
+Decimal amounts are preserved until a conversion is necessary:
+
+- USDC/aUSDC: 6 decimals
+- WETH/szETH: 18 decimals
+- szDebt: same as borrow token
+- Price feeds: 18 decimals
+
+All percentages are expressed in 18 decimals. For example, a 150% liquidation collateral ratio is represented as 1500000000000000000.
+
+#### Oracles
+
+##### Price Feed
+
+A contract that provides the price of ETH in terms of USDC in 18 decimals. For example, a price of 3327.39 ETH/USDC is represented as 3327390000000000000000.
+
+##### Variable Pool Borrow Rate Feed
+
+In order to set the current market average value of USDC variable borrow rates, we perform an off-chain calculation on Aave's rate, convert it to 18 decimals, and store it in the Size contract. For example, a rate of 2.49% on Aave v3 is represented as 24900000000000000. The admin can disable this feature by setting the stale interval to zero. If the oracle information is stale, orders relying on the variable rate feed cannot be matched.
 
 ## Links
 
-- **Previous audits:**  https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-03-19-LightChaserV3.md
-https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-03-26-Solidified.pdf
-https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-05-2024-Spearbit-draft.pdf
+- **Previous audits:**
+  - https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-03-19-LightChaserV3.md
+  - https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-03-26-Solidified.pdf
+  - https://github.com/SizeCredit/size-solidity/blob/main/audits/2024-05-2024-Spearbit-draft.pdf
   - ✅ SCOUTS: If there are multiple report links, please format them in a list.
 - **Documentation:** https://docs.size.cash/
 - **Website:** https://size.credit/
