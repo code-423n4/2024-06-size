@@ -154,53 +154,62 @@ N/A
 
 ## Main invariants
 
-DEPOSIT_01: Deposit credits the sender
-DEPOSIT_02: Deposit transfers tokens to the protocol
+- DEPOSIT_01: Deposit credits the sender
+- DEPOSIT_02: Deposit transfers tokens to the protocol
 
-WITHDRAW_01: Withdraw deducts from the sender
-WITHDRAW_02: Withdraw removes tokens from the protocol
+- WITHDRAW_01: Withdraw deducts from the sender
+- WITHDRAW_02: Withdraw removes tokens from the protocol
 
-BORROW_01: Borrow increases the borrower's cash
-BORROW_02: Borrow increases the number of loans
+- BORROW_01: Borrow increases the borrower's cash
+- BORROW_02: Borrow increases the number of loans
 
-CLAIM_01: Claim does not decrease the sender's cash
-CLAIM_02: Claim is only valid for DebtPositions
+- CLAIM_01: Claim does not decrease the sender's cash
+- CLAIM_02: Claim is only valid for CreditPositions
 
-LIQUIDATE_01: Liquidate increases the sender's collateral
-LIQUIDATE_02: Liquidate decreases the sender's cash if the loan is not overdue
-LIQUIDATE_03: Liquidate only succeeds if the borrower is liquidatable
-LIQUIDATE_04: Liquidate decreases the borrower's debt
-LIQUIDATE_05: Liquidate clears the loan's debt
+- LIQUIDATE_01: Liquidate increases the sender collateral
+    
+- LIQUIDATE_02: Liquidate decreases the sender's cash if the loan is not overdue
+- LIQUIDATE_03: Liquidate only succeeds if the borrower is liquidatable
+- LIQUIDATE_04: Liquidate decreases the borrower's debt
+- LIQUIDATE_05: Liquidate clears the loan's debt
 
-SELF_LIQUIDATE_01: Self-Liquidate increases the sender collateral
-SELF_LIQUIDATE_02: Self-Liquidate decreases the borrower's debt
+- SELF_LIQUIDATE_01: Self-Liquidate increases the sender collateral
+- SELF_LIQUIDATE_02: Self-Liquidate decreases the borrower's debt
+    
+- SELF_LIQUIDATE_03: Self-Liquidate does not change the borrower's CR (up to a precision)
 
-REPAY_01: Repay transfers cash from the sender to the protocol
-REPAY_02: Repay decreases the borrower's debt
-REPAY_02: Repay clears the loan's debt
+- REPAY_01: Repay transfers cash from the sender to the protocol
+- REPAY_02: Repay decreases the borrower's debt
+- REPAY_02: Repay clears the loan's debt
 
-LOAN_01: loan.credit >= minimumCreditBorrowAToken
-LOAN_02: minimumTenor <= loan.tenor <= maximumTenor
-LOAN_03: COUNT(credit positions) >= COUNT(debt positions)
+- LOAN_01: loan.credit >= minimumCreditBorrowAToken
+- LOAN_02: minTenor <= loan.tenor <= maxTenor
+- LOAN_03: COUNT(credit positions) >= COUNT(debt positions)
+- LOAN_04: loan.liquidityIndexAtRepayment > 0 => loan.loanStatus == REPAID
+- LOAN_05: A CreditPosition's debtPositionId is never updated
 
-TOKENS_01: The sum of collateral deposit tokens is equal to the underlying collateral
-TOKENS_02: The sum of borrow deposit tokens is equal to the sum of borrow deposit tokens for each user
+    
+- TOKENS_01: The sum of collateral deposit tokens is equal to the underlying collateral
+- TOKENS_02: The sum of borrow deposit tokens is equal to the sum of borrow deposit tokens for each user
+    
+- UNDERWATER_01: A user cannot make an operation that leaves any user underwater
+- UNDERWATER_02: Underwater users cannot borrow
+    
+- COMPENSATE_01: Compensate does not change the borrower's debt if minting new credit
+    
+- COMPENSATE_02: Compensate reduces the borrower's debt if using an existing credit
 
-UNDERWATER_01: A user cannot make an operation that leaves any user underwater
-UNDERWATER_02: Underwater users cannot borrow
+- SOLVENCY_01: SUM(outstanding credit) == SUM(outstanding debt)
+- SOLVENCY_02: SUM(credit) <= SUM(debt)
+- SOLVENCY_03: SUM(positions debt) == user total debt, for each user
+- SOLVENCY_04: SUM(positions debt) == SUM(debt)
+    
+- FEES_01: Fragmentation fees are applied whenever there is a credit fractionalization
+- FEES_02: Cash swap operations increase the fee recipient balance
 
-COMPENSATE_01: Compensate does not change the borrower's debt if minting new credit
-COMPENSATE_02: Compensate reduces the borrower's debt if using an existing credit
+- DOS: Denial of Service
 
-SOLVENCY_01: SUM(outstanding credit) == SUM(outstanding debt)
-SOLVENCY_02: SUM(credit) <= SUM(debt)
-SOLVENCY_03: SUM(positions debt) == user total debt, for each user
-SOLVENCY_04: SUM(positions debt) == SUM(debt)
-
-FEES_01: Fragmentation fees are applied whenever there is a credit fractionalization
-FEES_02: Cash swap operations increase the fee recipient balance
-
-DOS: Functions should not revert if preconditions are met (Denial of Service)
+- REVERTS: Actions behave as expected under dependency reverts
 
 ✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
 
