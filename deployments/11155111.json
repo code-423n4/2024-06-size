@@ -1,0 +1,19 @@
+{
+  "commit": "59d80c5",
+  "deployments": {
+    "PriceFeed": "0xBB4d49534a4F8B7Ae2C4bf7938C9B2c519C32838",
+    "Size-implementation": "0xb38b433F7511ea8EA849322981e8244Ae6D742d6",
+    "Size-proxy": "0xb38b433F7511ea8EA849322981e8244Ae6D742d6"
+  },
+  "networkName": "sepolia-mocks",
+  "parameters": {
+    "feeRecipient": "0xf0c7f57f5f889d546f032e50fba953bd7c026350",
+    "owner": "0xf0c7f57f5f889d546f032e50fba953bd7c026350",
+    "sequencerUptimeFeed": "0x0000000000000000000000000000000000000000",
+    "usdc": "0x94a9d9ac8a22534e3faca9f4e7f2e2cf85d5e4c8",
+    "usdcAggregator": "0x0000000000000000000000000000000000000000",
+    "variablePool": "0x9f1344c012008cff779ea4ba095c9576be7b323f",
+    "weth": "0xfff9976782d46cc05630d1f6ebab18b2324d6b14",
+    "wethAggregator": "0x0000000000000000000000000000000000000000"
+  }
+}
