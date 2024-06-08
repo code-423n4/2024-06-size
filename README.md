@@ -31,7 +31,7 @@ _Note for C4 wardens: Anything included in this `Publicly Known Issues` section 
 - If the Variable Pool (Aave v3) fails to `supply` or `withdraw` for any reason, such as supply caps, Size's `deposit` and `withdraw` may be prevented
 - Centralization risk related to integrations (USDC, Aave v3, Chainlink) are out of scope
 - The Variable Pool Borrow Rate feed is trusted and users of rate hook adopt oracle risk of buying/selling credit at unsatisfactory prices
-- The insurance fund (out of scope for this project) may not be able to make all lenders whole, maybe unfair, and may be manipulated
+- The insurance fund (out of scope for this project) may not be able to make all lenders whole, may be unfair, and may be manipulated
 - LiquidateWithReplacement might not be available for big enough debt positions
 - All issues acknowledged on previous audits and automated findings
 
