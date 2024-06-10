@@ -407,6 +407,8 @@ yarn echidna-assertion
 for i in {0..5}; do halmos --loop $i; done
 ```
 
+*Note*: We're not sure why Halmos outputs the following warning: `Skipped SizeViewData.json due to parsing failure: KeyError: 'metadata'.`
+
 ## Miscellaneous
 
 Employees of [SPONSOR NAME] and employees' family members are ineligible to participate in this audit.
