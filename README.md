@@ -411,4 +411,4 @@ for i in {0..5}; do halmos --loop $i; done
 
 ## Miscellaneous
 
-Employees of [SPONSOR NAME] and employees' family members are ineligible to participate in this audit.
+Employees of Size and employees' family members are ineligible to participate in this audit.
