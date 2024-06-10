@@ -360,6 +360,8 @@ After our last security audit, we implemented numerous fixes and added new featu
    - `BorrowerExit` was eliminated in favor of a `BuyCreditMarket` + `Compensate` flow.
    - `Compensate` now accepts a `creditPositionToCompensateId` that can be set to `RESERVED_ID`, which can create a DebtPosition/CreditPosition pair, allowing for debt reduction on an existing loan while creating a new debt. This facilitates partial repayments.
 
+5. Tenor vs Due Date: as part of a refector, market orders now accept a `tenor` parameter instead of a `dueDate`, and the due date is calculated on-chain based on the `block.timestamp`
+
 ## All trusted roles in the protocol
 
 | Role                                | Description                       |
