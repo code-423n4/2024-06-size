@@ -1,0 +1,4270 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2024 / size-jun10
+==============================================================
+
+[06/04/2024 00:06] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $200,000 in USDC **Size** audit!
+
+📆 Audit opens 06/10/2024 20:00 (20:00 UTC) and runs through 07/02/2024 20:00(20:00 UTC) (22 days).
+
+Please give a warm welcome to the Size team, particularly @aviggiano , who will be available for questions either here in the channel or via a PRIVATE thread in the UTC-3 timezone. 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2024-06-size
+
+{Reactions}
+🫡 (15) 
+
+[06/06/2024 18:17] realfakepicnic (pinned)
+Size is doing a live walk-through of their codebase on Monday for all participating wardens! 
+
+Mark your calendar: **Monday June 10th 15:30 UTC** in the Size Credit workshops channel (discord made us create a separate "stage" channel so we can present + record): https://discord.gg/code4rena?event=1247992085739737281
+
+{Reactions}
+🔥 (17) 
+
+[06/10/2024 09:07] pablo_dev18
+Ok
+
+
+[06/10/2024 10:41] evm__samurai
+Please, why is the website size.credit not opening 
+
+Or is it not live?
+
+
+[06/10/2024 10:59] uaarrr
+https://size.credit/
+
+{Embed}
+https://size.credit/
+Size
+Size is the first fixed rate lending marketplace with unified liquidity.
+
+{Reactions}
+👍 (2) 
+
+[06/10/2024 13:31] .tinkering
+did it end up opening for you? 
+
+not much on there yet apart from a link to https://docs.size.credit
+
+{Reactions}
+👍 
+
+[06/10/2024 14:36] pascal9476
+Nope had to use vpn to open it
+
+
+[06/10/2024 14:43] .tinkering
+Weird, we'll check the DNS but that doesn't make much sense to me  😅
+
+
+[06/10/2024 14:44] pascal9476
+The code walk is still scheduled for 15:30 utc yeah ?
+
+
+[06/10/2024 14:44] .tinkering
+(not geoblocking and has had plenty of time to propagate)
+
+
+[06/10/2024 14:44] .tinkering
+45 mins from now 👍
+
+{Reactions}
+👍 
+
+[06/10/2024 14:59] realfakepicnic
+@🐺Wardens 30 minutes until the LIVE code walk through! Join us in the Size Credit workshops channel for some alpha: https://discord.gg/code4rena?event=1247992085739737281
+
+{Reactions}
+andbang (10) 10_10 (3) ohyeah (2) yay (2) chefskiss 
+
+[06/10/2024 15:00] .tinkering
+@aviggiano what will we cover in the walkthrough? code structure + ?
+
+
+[06/10/2024 15:03] aviggiano
+I was thinking about starting with a brief explanation of what Size is, then following up with the code structure, going through each of our core functions, and finalizing with the biggest areas of concern.
+
+{Reactions}
+🫡 (2) 
+
+[06/10/2024 15:05] tamayonft
+Looking forward give my best for this contest
+
+{Reactions}
+🔥 (8) 
+
+[06/10/2024 15:05] tamayonft
+Gg to everyone
+
+
+[06/10/2024 15:13] _karanel
+Will this be recorded?
+
+
+[06/10/2024 15:13] realfakepicnic
+yep!
+
+{Reactions}
+🙌 (5) 
+
+[06/10/2024 15:29] 0x11singh99
+where we can find recording Youtube or ?
+
+
+[06/10/2024 15:31] skitzzy
+Audio sounds fine to me @aviggiano
+
+
+[06/10/2024 15:36] jejebl
+Why I can't hear anything?
+
+
+[06/10/2024 15:51] .tinkering
+not sure where it will be, will let you guys know after
+
+
+[06/10/2024 16:55] .tinkering
+probably not super helpful, but if you guys want to check out our private FE staging to get an idea of how the product will look to users, shoot me a dm
+
+
+[06/10/2024 17:08] pascal9476
+Can we get the audit report of the spearbit audit ? 
+Or it’s still private for now
+
+
+[06/10/2024 17:09] .tinkering
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/report-review-size_1-4696F.pdf
+
+{Reactions}
+👍 
+
+[06/10/2024 17:10] .tinkering
+yes, of course, and links should work 3 hrs from now
+
+{Reactions}
+👍 (2) 
+
+[06/10/2024 17:16] gulshn321
+uploaded yet?
+
+
+[06/10/2024 17:24] .tinkering
+no, word is we need a small round of editing since it ended up being multiple sources/problems or something
+
+
+[06/10/2024 17:26] gulshn321
+got it
+
+
+[06/10/2024 17:53] marshall1624
+Will the protocol be in solidity language?
+
+{Reactions}
+👍 (5) 🇾 (5) 🇪 (5) 🇸 (5) 🇨 🇴 (2) 🅾️ 🇱 
+
+[06/10/2024 20:01] .tinkering
+repo is live!
+
+ https://code4rena.com/audits/2024-06-size
+
+{Embed}
+https://code4rena.com/audits/2024-06-size
+Size | Code4rena
+$200,000 in USDC
+10 June 8:00 PM—2 July 8:00 PM
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/c4-og-v2-092E9.png
+
+{Reactions}
+💯 
+
+[06/10/2024 20:02] C4 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-06-size#automated-findings--publicly-known-issues) are out of scope and ineligible for awards.
+
+
+[06/10/2024 20:03] goldf9
+advertisement picture is wrong, I think.
+
+
+[06/10/2024 20:04] goldf9
+especially the price is wrong.
+
+
+[06/10/2024 20:04] .tinkering
+$200,000 *
+
+
+[06/10/2024 20:04] goldf9
+Of course, I know.
+
+
+[06/10/2024 20:04] goldf9
+I mean the picture is wrong.
+
+
+[06/10/2024 20:04] knownfactc4_29311
+Pinned a message.
+
+
+[06/10/2024 20:05] xaun_382
+Has the post to the code review this morning been postes
+
+
+[06/10/2024 20:05] .tinkering
+the link to the recorded walkthrough is still pending the c4 team splicing the video together I believe
+
+{Reactions}
+✅ (2) 
+
+[06/10/2024 20:05] .tinkering
+https://docs.size.cash is pretty comprehensive though
+
+
+[06/10/2024 20:06] 0xpopeye
+Really exited for this contest :andbang:
+
+{Reactions}
+andbang (2) yay 
+
+[06/10/2024 20:07] .tinkering
+(the last ~20 mins of the video has a few highlights of what might be worth focusing on, in particular the changes from the Spearbit audit, as they were not reviewed by Spearbit, and were pretty major refactors)
+
+
+[06/10/2024 20:07] knownfactc4_29311
+Adjusting this, I think its just the still image version that's missing a 0.
+
+
+[06/10/2024 20:07] .tinkering
+dm me as well if you want a link to our private FE staging to get an idea of how the product will function from the user perspective
+
+{Reactions}
+👍 
+
+[06/10/2024 20:10] knownfactc4_29311
+Pinned a message.
+
+
+[06/10/2024 20:13] knownfactc4_29311
+Pinned a message.
+
+
+[06/10/2024 20:13] tamayonft
+are the past issuis already from the past audits already solutionate rigth?
+
+
+[06/10/2024 20:15] .tinkering
+tldr;
+
+Solidified audit -- codebase has changed significantly since this audit
+Spearbit audit -- most recent, with a couple major refactors that have been addressed but **have not** been reviewed by Spearbit, so would benefit from a look
+
+{Reactions}
+👍 (3) 
+
+[06/10/2024 20:19] aviggiano
+Good luck everyone!
+
+{Reactions}
+🫡 (9) 
+
+[06/10/2024 20:33] noqcks
+the previous audit links are 404'd @aviggiano
+
+https://docs.size.credit/non-technical/audits-and-security
+
+
+[06/10/2024 20:34] stormy0998
+:hy_catclapp:
+
+
+[06/10/2024 20:35] .tinkering
+Until they get those working: 
+
+Solidified: https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Size%20Lending.pdf
+Spearbit:
+
+{Reactions}
+thankyou (3) 
+
+[06/10/2024 20:35] .tinkering
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/report-review-size_1-FF30A.pdf
+
+
+[06/10/2024 20:42] pascal9476
+I’m getting an error while compiling
+
+
+[06/10/2024 20:43] pascal9476
+Something about open zeppelin remappings any help?
+
+
+[06/10/2024 20:49] azadxx
+hey can anyone send link for the recorded codewalk through ... missed the session
+
+
+[06/10/2024 20:50] aviggiano
+The organization repo is still closed, we'll make it public soon. The reports from the C4 repo are working
+
+
+[06/10/2024 20:50] aviggiano
+Can you share the output of your build command?
+
+
+[06/10/2024 21:01] pascal9476
+I found a soln thanks
+
+{Reactions}
+👍 
+
+[06/10/2024 21:05] azadxx
+i think runnig , forge install then forge build .. works fine for me
+
+
+[06/10/2024 21:14] .anas_22
+Why the competitive audit is not listed in the c4 homepage?
+
+
+[06/10/2024 21:22] azadxx
+visible to me
+
+
+[06/10/2024 21:25] .anas_22
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/C4proof-928FC.JPG
+
+
+[06/10/2024 21:25] .anas_22
+Not to me
+
+
+[06/10/2024 21:27] aviggiano
+https://code4rena.com/audits/2024-06-size
+
+{Embed}
+https://code4rena.com/audits/2024-06-size
+Size | Code4rena
+$200,000 in USDC
+10 June 8:00 PM—2 July 8:00 PM
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/c4-og-v2-092E9.png
+
+{Reactions}
+👍 
+
+[06/10/2024 23:55] aviggiano
+It will be shared soon. There's some editing that needs to be done
+
+{Reactions}
+👍 (9) 
+
+[06/11/2024 04:26] almurhasan
+Hi
+
+
+[06/11/2024 07:47] sathish9098kumar
+Hi how to resolve this issue ? @aviggiano
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Capture-49AA1.PNG
+
+
+[06/11/2024 07:49] sathish9098kumar
+i tried many ways not working any
+
+
+[06/11/2024 08:01] daniel526
+Have you tried updating your solc version so that it goes in line with the version currently running in the contracts?
+
+
+[06/11/2024 08:05] engine_ros
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_2024-06-11_133519-90EDA.png
+
+
+[06/11/2024 08:10] kirobrejka_80610
+foundryup
+
+
+[06/11/2024 08:10] kirobrejka_80610
+then try again
+
+
+[06/11/2024 08:11] sathish9098kumar
+Yes updated my solc to latest version still not working
+
+
+[06/11/2024 08:12] sathish9098kumar
+Okay
+
+
+[06/11/2024 08:43] pascal9476
+FoundryUp 
+Forge install 
+Forge build
+
+{Reactions}
+👍 (5) 
+
+[06/11/2024 08:44] pascal9476
+Worked for me
+
+
+[06/11/2024 10:32] _bzee.
+solc-select install/use 0.8.23
+
+{Reactions}
+👍 (3) 
+
+[06/11/2024 10:55] _bzee.
+Any Idea what might be wrong?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_6_11_2024_11_54_16_AM-D2D9D.png
+
+
+[06/11/2024 11:10] aviggiano
+Have you tried foundryup?
+
+
+[06/11/2024 11:13] _bzee.
+Yep
+
+
+[06/11/2024 11:17] doomborg
+Hi, is the recorded walkthrough out?
+
+
+[06/11/2024 11:18] uaarrr
+you use windows , that is wrong, use wsl
+
+
+[06/11/2024 11:18] _bzee.
+Am using wsl
+
+
+[06/11/2024 11:24] vizay315
+when will be the recorded walkthrough out?
+
+{Reactions}
+➕ (3) 
+
+[06/11/2024 11:29] iam_emptyset
+Started a thread.
+
+
+[06/11/2024 12:09] aviggiano (pinned)
+The code wakthrough is out
+
+https://www.youtube.com/watch?v=BNGkWUUG2fg
+
+{Embed}
+Code4rena
+https://www.youtube.com/watch?v=BNGkWUUG2fg
+Size Credit code walk-through
+Learn about the Size Credit codebase and what to focus on during the June 10th - July 2nd $200k audit competition on Code4rena.
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/sddefault-0BED1.jpg
+
+{Reactions}
+👍 (5) 
+
+[06/11/2024 12:12] aviggiano (pinned)
+Sure
+
+As explained during the walkthrough (and also in the docs of ISize.sol), some operations (buy credit, sell credit, compensate), expect a credit position ID as input parameter so that you can buy an existing credit (from a lender), sell an existing credit (to a credit buyer), or compensate your debt from another loan you have. 
+
+The special ID of `RESERVED_ID = type(uint256).max` can also be passed to represent "create a credit/debt pair" and execute the buying/selling/compensation operation at the same time.
+
+This is used for example to do a simple lend with `buyCreditMarket(RESERVED_ID)`, do a simple borrow with `sellCreditMarket(RESERVED_ID)` or partially repay a loan with `compensate(RESERVED_ID)` + `repay`
+
+{Reactions}
+💜 
+
+[06/11/2024 12:12] kartoonjoy
+Pinned a message.
+
+
+[06/11/2024 12:13] kartoonjoy
+Pinned a message.
+
+
+[06/11/2024 12:18] aviggiano
+Started a thread.
+
+
+[06/11/2024 12:20] aviggiano
+This is also explained here
+
+https://docs.size.credit/technical-docs/contracts/3.3-market-orders
+
+> Observation: thanks to its robust API, both existing and new credit may be sold through the SellCreditMarket function. By passing type(uint256).max as the creditPositionId, the system first creates a DebtPosition/CreditPosition pair assigned to the sender, in a "mint credit" internal operation, and then sells that CreditPosition to the lender. If an existing credit position is being sold, the tenor parameter is ignored, as it can be automatically computed from the related debt position.
+
+> Observation: thanks to its robust API, here too, both existing and new credit may be bought through the BuyCreditMarket function. By passing type(uint256).max as the creditPositionId, the system first creates a DebtPosition/CreditPosition pair assigned to the borrower, in a "mint credit" internal operation, and then buys that CreditPosition to the sender. If an existing credit position is being bought, both the tenor and  borrower parameters are ignored, as these can be automatically computed from the related debt and credit positions.
+
+
+[06/11/2024 12:38] kartoonjoy (pinned)
+🤖 **Documentation bot assistance**: For general questions about the codebase, give our documentation bot a try, by __tagg__ing __@Docs Wolf in any thread (private or public) and asking your question.__ The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.
+
+
+[06/11/2024 12:39] kartoonjoy
+Pinned a message.
+
+
+[06/11/2024 12:40] aviggiano
+@Docs Wolf how can you partially repay a loan?
+
+
+[06/11/2024 12:40] kartoonjoy
+You'll want to create a thread to activate the bot
+
+{Reactions}
+👍 
+
+[06/11/2024 12:42] aviggiano
+Bot seems to work great 💯
+
+{Reactions}
+🎉 (2) hi5 (2) 
+
+[06/11/2024 12:55] nave765
+Hey, what does N/A means?
+
+
+[06/11/2024 12:58] carlitox477
+My admiration to @aviggiano and every developer involved in this code, documentation is great but simple, codebase is clean and easy to read, as well as the test suite
+
+{Reactions}
+👍 (6) 💯 
+
+[06/11/2024 13:03] kalogerone
+also @Gao is part of the team i'm pretty sure, should be tagged in the initial post too so we know to tag him in private threads if needed
+
+
+[06/11/2024 13:04] aviggiano
+Not Applicable.
+
+Any particular instances where this raises a question?
+
+I usually mark N/A for documentation purposes of input validation fields that in reality do not need input validation. For example, in `validateClaim`, there's a `N/A` for `msg.sender`, since claim can be performed by anyone, as it is a permissionless method.
+
+
+[06/11/2024 13:11] nave765
+Thank you for your reply
+
+
+[06/11/2024 13:24] tobezzi
+why is this docs refusing to  load
+
+
+[06/11/2024 13:28] aviggiano
+Where are you based? VPN on? Seems fine here & in other countries
+https://www.geopeeker.com/fetch/?url=https%3A%2F%2Fdocs.size.credit%2Ftechnical-docs%2Fcontracts%2F3.3-market-orders&csrf_token=uwCPECvsUc%2FDnd6DGB2pM2mo96WKEYWZnSHYZJ03Plg%3D
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/screenshot-2024-06-11-10-28-05-7FA1E.png
+
+
+[06/11/2024 13:39] escrow1337
+can confirm even with VPN everything works fine for me.
+
+{Reactions}
+🔥 
+
+[06/11/2024 13:40] escrow1337
+kudos @aviggiano for this clean code 😎
+
+
+[06/11/2024 13:46] aviggiano (pinned)
+`Dockerfile` just dropped for those who are having trouble with the project compilation
+https://gist.github.com/aviggiano/831ed25a7fa4b67bb6944439db4f9ff6
+
+
+[06/11/2024 13:52] 0xstriker
+I have spend the whole day trying to install the libraries in this project but can't, I ran 'forge install' to install all the libs but it won't install and it will give a git submodule error, I tried to clone the libs separately and copy them to the projects lib folder but that doesn't work either, tried a few other ways too but nothing seems to work, can some one assist
+
+
+[06/11/2024 13:57] aviggiano
+Have you tried `foundryup`? if nothing works, you could try with Docker https://discord.com/channels/810916927919620096/1247222125543162038/1250083664021291069
+
+
+[06/11/2024 13:58] 0xstriker
+Tried foundryup but haven't tried docker yet, let me check it out
+
+
+[06/11/2024 14:01] _karanel
+Just using `forge install` worked for me!!!
+
+{Reactions}
+🙏 
+
+[06/11/2024 14:45] vizay315
+may u were not in project folder. If possible send screenshot of the error.
+
+
+[06/11/2024 15:14] 0xstriker
+this first is if run forge install, it goes on to clone but ends up with this error:
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_from_2024-06-11_19-41-55-24542.png
+
+
+[06/11/2024 15:15] 0xstriker
+and if I clone the libraries manually and copy them to the lib folder of the project it ends up with this error:
+
+
+[06/11/2024 15:15] 0xstriker
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_from_2024-06-11_19-42-40-C589B.png
+
+
+[06/11/2024 15:32] vizay315
+delete the complete project. 
+1. sudo apt-get update && sudo apt-get upgrade git
+2. foundryup
+3. clone the git repo
+4. instead of forge install, try 'forge coverage'. forge coverage automatically installs the dependencies. lastly use forge build.
+
+
+[06/11/2024 15:32] vizay315
+do u use vpn
+
+
+[06/11/2024 15:50] pascal9476
+Can the sponsors summarize credit limit and credit market in simple words ?
+
+
+[06/11/2024 15:51] 0xstriker
+I have done all that and it doesn't seem to work for me, right now I am trying to build it with docker, so I don't know we will see, and I don't use vpn,
+
+
+[06/11/2024 15:51] pascal9476
+@aviggiano @Gao
+
+
+[06/11/2024 15:52] .tinkering
+limit = limit order (maker), market = market order (taker)
+
+buy credit = lend 
+sell credit = borrow
+
+{Reactions}
+👍 (4) 
+
+[06/11/2024 15:58] .tinkering
+sellCreditMarket (market borrow) fills a buyCreditLimit order
+buyCreditMarket (market lend) fills a sellCreditLimit order, or buys an existing credit depending on the params passed
+
+{Reactions}
+👍 (4) 
+
+[06/11/2024 16:23] flackoon
+Has anyone been able to get "Go to definition" in VS Code work for lines like `state.validateInitialize(owner, f, r, o, d)` for example – to go to the definition of the `validateInitialize()` function?
+These seem to be the only ones I can't get the hang of 🤔
+
+{Reactions}
+👍 
+
+[06/11/2024 16:24] aviggiano
+No 😢 
+I do it with `Cmd+P`
+lmk if you manage to make it work
+
+{Reactions}
+👍 
+
+[06/11/2024 16:27] aviggiano
+This has happened to me in the past, and I think it is a networking issue. "Trying again" magically fixed the problem. I'll reach out through DM to see if I can help
+
+{Reactions}
+👍 
+
+[06/11/2024 16:28] aviggiano
+https://stackoverflow.com/questions/66366582/github-unexpected-disconnect-while-reading-sideband-packet
+
+> First of all, check your network connection stability.
+
+Yeah, indeed it seems to be a networking issue
+Can you try the solutions recommended on the post?
+
+
+[06/11/2024 17:39] tamayonft
+i was throug the same this days in a go file, after doing some research, the only thing that helpme was unnistall vs code and install again
+
+
+[06/11/2024 19:19] infectedfuture
+I spam the keyboard shortcut for "Go to References" (cmd+F12 on my vscode, not sure its the standard shortcut) and I don't know why but it works after 4-5 times... 😆
+
+
+[06/11/2024 19:20] infectedfuture
+its specific to libraries idk why, works fine otherwise
+
+
+[06/11/2024 19:34] avoloder
+Hi @aviggiano  I have a question regarding claim function: in the code-walkthrough video you said that the lender does not necessarily have to call claim function immediately and therefore can earn additional yield from Aave, however you also said that anyone can claim on behalf of someone else, or that the protocol has its own bots to claim for other lenders. What happens if I as a lender want to leave the debt repayment (not claim it) and earn yield from Aave but someone else / bot claims it for me? Is there any minimum or maximum time that I can leave my repayment unclaimed?
+
+
+[06/11/2024 19:40] aviggiano (pinned)
+Good question, I think I could have explained it during the walkthrough.
+
+What happens is that nothing changes from the lender perspective.
+
+The reason is that `claim` will only do an internal balance change from `address(this)` to `creditPosition.lender`, but since all USDC is already deposited on Aave (through `deposit` / `DepositTokenLibrary` / `NonTransferrableScaledToken`), all users' borrow tokens/cash already automatically earns variable interest by default.
+
+Let's say there are two situations:
+
+Situation I
+1. repay
+2. claim
+3. pass time
+4. withdraw
+
+Situation II
+1. repay
+2. pass time
+3. claim
+4. withdraw
+
+Both Situation I and Situation II will have the same output for the lender, since in Situation I, the time passage will directly credit `borrowAToken.balanceOf(lender)`, while in Situation II, it will credit `borrowAToken.balanceOf(address(this))`, but in the end the credit amount will be proportionally sent to the lender's account during the claim step.
+
+(btw, this could be a nice fuzz test case 😉  we don't have that one)
+
+{Reactions}
+😉 
+
+[06/11/2024 19:41] aviggiano
+Q: Is there any minimum or maximum time that I can leave my repayment unclaimed
+A: No
+
+{Reactions}
+👍 
+
+[06/11/2024 19:41] aviggiano
+You can refer to the following test case to see it in more detail: `test_Claim_claim_at_different_times_may_have_different_interest`
+
+
+[06/11/2024 19:43] avoloder
+Thanks! I got it
+
+
+[06/11/2024 19:46] kartoonjoy
+Pinned a message.
+
+
+[06/11/2024 19:47] aviggiano
+Started a thread.
+
+{Reactions}
+💯 
+
+[06/11/2024 19:47] kartoonjoy
+Pinned a message.
+
+
+[06/12/2024 01:01] 0xtotem
+Started a thread.
+
+
+[06/12/2024 01:16] .tinkering
+What else might be helpful for you guys to see or have? 
+
+And a reminder that I'm happy to share the FE staging in a dm if helpful to visualize how the product will look to users.
+
+
+[06/12/2024 01:20] .tinkering
+Have had a few questions regarding understanding how buying/selling credit relates to borrowing, so here's a few shots of the app and where these functions might be used.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-E2BF2.png
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-6CF39.png
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-2B066.png
+
+{Reactions}
+✅ (5) 
+
+[06/12/2024 01:52] georgefalcon_
+Started a thread.
+
+
+[06/12/2024 02:32] engine_ros
+have u fix this ?
+how can i fix
+thanks
+
+
+[06/12/2024 03:36] aviggiano
+Hello
+Some people have asked about fees, so I added a few numeric examples to the documentation: https://docs.size.credit/technical-docs/contracts/2.3-fees
+
+{Reactions}
+👍 (2) 
+
+[06/12/2024 03:44] engine_ros
+i have to research the function every time from Size.sol
+
+how do i fix this on VsCode.
+pls explain in clear steps if you have solution
+
+thanks
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_2024-06-12_091407-215AB.png
+
+
+[06/12/2024 06:02] shui1
+im getting stuck in this test 
+when running `forge test`
+any idea what could it be ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-461EE.png
+
+
+[06/12/2024 06:12] engine_ros
+whts ur cpu usage during test.
+It happens to me (but not all the time)
+
+
+[06/12/2024 06:58] engine_ros
+```tenor = the period of time before something becomes due for payment:      
+```
+this is a proper definition of tenor ?
+
+
+[06/12/2024 07:14] pascal9476
+I was just about to ask meaning of tenor too
+
+{Reactions}
+👍 
+
+[06/12/2024 08:23] avoloder
+Yes, it is basically the maturity of the loan
+
+{Reactions}
+👍 
+
+[06/12/2024 09:55] aviggiano
+This is probably foundry invariant tests running. They take about 20s on my computer
+```
+Ran 1 test for test/invariants/FoundryTester.sol:FoundryTester
+[PASS] invariant() (runs: 1000, calls: 15000, reverts: 460)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 16.44s (16.43s CPU time)
+```
+
+
+[06/12/2024 12:19] tamoghna.
+Hey @aviggiano  had a doubt regarding the `liquidateWithReplacement` function. When a borrower corresponding to a particular lender is susceptible to liquidation, is the function being called by the protocol automatically to provide the lender with a healthy borrower or the lender needs to call the function themselves? 
+
+Also, if mechanisms are already present to prevent the borrower from delaying the repayment of loan then how does the borrower become under-collateralized/ susceptible to liquidation ?
+
+{Reactions}
+👍 
+
+[06/12/2024 12:43] konfushon
+Doing God's work 🤝
+
+
+[06/12/2024 12:45] no.one7777
+@aviggiano what is function `mulcticall` does. and what is `isMulticall` for
+
+
+[06/12/2024 12:47] aviggiano
+Hey
+
+Sure, here's some explanation:
+
+First, this function is guarded by the `KEEPER_ROLE`, which is a role assigned to protocol liquidation bots. These bots can both perform a regular `liquidate`, which is permissionless, or a `liquidateWithReplacement`, which is permissioned. So the first thing we should note is that if bots fail to call this function, for any reason, any liquidator can still call `liquidate` and make the lender whole, earning some incentive in the process.
+
+Second, it is worth pointing out that "When a borrower corresponding to a particular lender" is not a completely accurate description of the most generic case of the protocol. The reason is that 1 credit seller (borrower) can have multiple credit buyers (lenders) in case the credit buyer resells part of their future cash flow (partial lender exit). For example, if a borrower picks a lender with `sellCreditMarket(RESERVED_ID)`, then the lender can exit with `sellCreditMarket(creditPositionId)`, and now the initial borrower may have 2 lenders. Check out test case `test_SellCreditMarket_sellCreditMarket_CreditPosition_credit_is_decreased_after_exit` and documentation entry https://docs.size.credit/technical-docs/contracts/2.2-loans#id-2.2.2.2-creditposition
+
+Third, the purpose of `liquidateWithReplacement` is for the protocol to earn some additional cash when an underwater borrower can be replaced by a healthy borrower on the orderbook who might be willing to pay a higher rate than the original borrower. For example, suppose the initial borrower was paying 1% yearly. Some time passes, and they are now liquidatable. Due to different market conditions, the new borrow rates are up, and there are borrowers willing to pay 2% yearly. Because of this spread, the protocol can replace the underwater borrower with a new healthy borrower and keep the change. The situation for the lenders does not change anything, except that now they are to be repaid by a healthier borrower.
+
+{Reactions}
+👍 
+
+[06/12/2024 12:50] aviggiano
+Can you explain what you mean by "if mechanisms are already present to prevent the borrower from delaying the repayment of loan"?
+
+There are no mechanism to change the term of a loan. They all must be repaid by the due date. What happens if the borrower does not repay is that the loan becomes overdue and it can be liquidated.
+
+The borrower becomes under-collateralized by either withdrawing collateral or by a collateral price change. More information about that here: https://docs.size.credit/technical-docs/contracts/3.5-liquidations#id-3.5.1-automatic-collateral-assignment
+
+
+[06/12/2024 12:53] aviggiano
+Basically,  `multicall` allows a user to submit multiple actions in a single transaction. This can be useful for liquidations, for example, where the liquidator calls deposit, then liquidate, then withdraw.
+
+Check out `IMulticall.sol` for more details, and also test case `test_Multicall_liquidator_can_liquidate_and_withdraw`
+
+The purpose of `isMulticall` is a flag to check if postcondition checks should be waived during a multicall operation. This is especially useful for `deposit`, so that a debt reduction operation can always succeed, no matter if the cap is reached or not. There's some docs about that on `Deposit.sol`
+
+{Reactions}
+👍 (3) 
+
+[06/12/2024 12:56] no.one7777
+tnx
+
+
+[06/12/2024 13:01] tamoghna.
+by mechanisms i meant `liquidate` function
+
+
+[06/12/2024 13:01] tamoghna.
+Thanks for the explanation
+
+
+[06/12/2024 13:35] aviggiano
+Oh. I believe I misread your message.
+Yes, in a sense, liquidate/liquidateWithReplacement "prevent" the borrower from delaying the payment. More strictly, though, the liquidator will repay the loan on behalf of the borrower (so that the lenders can have their money back), and take the borrower's collateral (plus incentives) for not repaying by due date.
+
+
+[06/12/2024 13:43] tamoghna.
+Got it, thanks!
+
+
+[06/12/2024 15:11] namx05
+Hey @aviggiano! When's the video is releasing? Will it be on C4's yt channel or somewhere else?
+
+
+[06/12/2024 15:18] aviggiano
+Here
+
+https://discord.com/channels/810916927919620096/1247222125543162038/1250059299854749767
+
+Code Walkthrough recording
+
+{Reactions}
+💯 
+
+[06/12/2024 16:47] radev_40364
+@aviggiano Can you provide a simple example(no fees) with `buyCreditMarket`, splitted on different stages by showing Alice, Bob and Carl's funds, credits, dept etc. And how are they connected if Alice is the borrower and Bob & Carl are the lenders
+
+
+[06/12/2024 17:25] aviggiano (pinned)
+Sure
+
+For the sake of simplicity, assume no fees:
+
+1. Alice deposits collateral and submits a `sellCreditLimit` specifying she wants to borrow at 20% yearly
+2. Bob deposits cash and picks Alice's offer with `buyCreditMarket(alice, RESERVED_ID)`, lending $100 to Alice. Alice now owns a debt position `debtPositionId1` of $120 future value due 365 days from now, and her `debtToken` is incremented by the same amount, reducing her collateral ratio. Bob owns a credit position `creditPositionId1` of  $120, with the `debtPositionId` parameter pointing to Alice's debt position  `debtPositionId1`. This link is done in `AccountingLibrary.createDebtAndCreditPositions`
+3. Bob now wants to sell his credit and submits a `sellCreditLimit` specifying that he wants to earn 25% yearly.
+4. Carl wants to buy $30 worth of Bob's credit, and submits a `buyCreditMarket(_, creditPositionId1)`. Bob's credit is brought to present value at a 25% rate, and Carl needs to pay $30/1.25 = $24 in cash for a part of Bob's credit. Bob's credit is fractionalized in `AccountingLibrary.createCreditPosition`, and now Bob's credit position is reduced to $90 = $120-$30, and Carl owns a credit `creditPositionId2` worth $30.
+5. After all these operations, both credit positions `creditPositionId1` and `creditPositionId2` have the same `debtPositionId` parameter equal to `debtPositionId1`, ie, referring to Alice, the initial borrower.
+6. When Alice `repay`s, her $120 future value is deposited to the protocol. Then, both Bob and Carl (or anyone, since it is a permissionless method) can call  `claim` passing each of their respective credit position IDs. This will transfer cash from the protocol to the respective creditor. This way, Bob will get $90 in cash to his balance and Carl will get $30.
+
+You can see a similar test case in `test_SellCreditMarket_sellCreditMarket_exit_properties`, but with different values and checks.
+
+
+[06/12/2024 17:31] aviggiano
+This example already shows some particularities of the Size protocol:
+
+- In (1), Alice submits a `sellCreditLimit` wanting to borrow money. In (3), Bob too submits a `sellCreditLimit` wanting to exit part of his loan. So the same operation can be either used for a "simple borrow" or for a "loan exit". As the docs explains quite well, in both cases users are selling credit (aka future cash flow). So this may be future cash flow in the sense of a borrow or future cash flow that they are receiving from someone else (lender exiting)
+- In (4), during the credit fractionalization, a critical invariant of the protocol must hold, which is that `SUM(credit) = futureValue`. As we have explained, there can be multiple creditors for the same loan, but if this sum is not exact, the protocol would be either printing money (ie, sum of amount to be received greater than amount to be repaid, if `>`) or not giving back to creditors at the due date (ie, sum of amount to be received lesser than the amount to be repaid, if `<`)
+- In (4), as you may see in the code, the `borrower` parameter is not used. This is a bit confusing, but the reason is that you are buying an existing credit, so the actual storage value you should be looking at is `creditPosition.lender`. This was an API choice so that both "buy an existing credit" and "create & buy and existing credit" actions would happen at the same function. You can see that in `BuyCreditMarket.executeBuyCreditMarket`
+
+{Reactions}
+🔥 (10) 🫡 (4) 
+
+[06/12/2024 18:20] donkicha
+Can the Docs Wolf be trusted?
+
+Do you trust it?
+
+
+[06/12/2024 18:26] aviggiano
+I believe the bot is built on top of a LLM, which cannot be fully trusted, just like ChatGPT.
+I would suggest "trust but verify (on the docs & on the code)"
+
+
+[06/12/2024 19:17] kartoonjoy
+Pinned a message.
+
+
+[06/12/2024 20:10] stakog
+What is the significance of the borrow token cap? It seems this cap is not really used anywhere except from a few functions that check if it hasn't been breached
+
+
+[06/12/2024 20:11] aviggiano
+The reason for the borrow token cap is to allow the protocol to have a "guarded launch", so that it can limit the supply as it grows. For example, in the beginning, while the TVL grows, the cap may be $1M in deposits, for example. However, as you may see, the protocol will still want to allow for debt reductions. So even if the cap is reached, all operations that increase the health of the system should be allowed (`CapLibrary.sol`)
+
+
+[06/12/2024 20:14] stakog
+Why is it important to limit the supply?
+
+
+[06/12/2024 20:17] iam_emptyset
+In this post 3. "specifying that he wants to earn 25% yearly" I didn't understand
+
+
+[06/12/2024 20:17] aviggiano
+Projects may choose to do it for a number reason. Perhaps to prevent growing at a faster pace than its security/safety/trust, perhaps to prevent growing before a bug bounty program is in place, perhaps to allow only early adopters to participate in the beginning, etc.
+
+{Reactions}
+👍 
+
+[06/12/2024 20:22] aviggiano
+When users submit sell credit limit offers (or borrow bids), they specify through their yield curve the rate that they want to sell credit (or borrow). When users submit buy credit limit orders (or loan offers), they specify through their yield curve the rate that they want to pay for credit (or lend). See more here: 
+- https://docs.size.credit/non-technical/borrowing-selling-credit#borrowing-selling-credit-with-a-limit-order
+- https://docs.size.credit/non-technical/the-yield-curve-order-book
+- https://docs.size.credit/technical-docs/contracts/1.2-limit-orders
+
+{Reactions}
+👍 
+
+[06/12/2024 21:11] mladenov0603
+users can deposit only usdc and weth right?
+
+
+[06/12/2024 21:13] kartoonjoy
+Have you asked the @Docs Wolf that question in a thread yet?
+
+
+[06/12/2024 21:14] mladenov0603
+No
+
+
+[06/12/2024 21:24] kartoonjoy
+Give it a try, please
+
+
+[06/12/2024 21:27] mladenov0603
+I already did, i haven't seen the initial message in Discord, sorry 🙂
+
+
+[06/12/2024 21:29] aviggiano
+Users can deposit ETH/WETH for collateral and USDC for borrow tokens but only withdraw WETH and USDC
+
+
+[06/12/2024 22:36] tamayonft
+What is the different between credit and debt position
+
+
+[06/13/2024 01:31] .tinkering
+Opposites. 
+
+Owner of a debt pays back the owner of the corresponding credit at maturity.
+
+Credit = future cashflow
+
+If you (market) borrow / sell credit, you have a debt position. If you (market) lend / buy credit, you have a credit.
+
+
+[06/13/2024 02:15] tamayonft
+thanks so much sr
+
+
+[06/13/2024 03:02] engine_ros
+is Documentation Bot available ?
+
+{Reactions}
+blobcatyes 
+
+[06/13/2024 03:02] .tinkering
+yes, @Docs Wolf thread
+
+
+[06/13/2024 03:05] engine_ros
+is it work here how ?
+thanks
+
+
+[06/13/2024 03:05] .tinkering
+https://discord.com/channels/810916927919620096/1250114832552951879
+
+click there, look at how other people use
+
+
+[06/13/2024 05:19] thisvishalsingh
+Hey, have someone faced this issue while using remix ide - not able to compile `Error: not found lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol` How you solved it?
+
+
+[06/13/2024 05:42] mihir1808
+When will the recorded walkthrough be available ?
+
+
+[06/13/2024 06:17] brevistw
+You can use the url:
+`import "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/utils/PausableUpgradeable.sol";`
+
+{Reactions}
+👍 
+
+[06/13/2024 06:18] brevistw
+https://discord.com/channels/810916927919620096/1247222125543162038/1250059299854749767
+
+{Reactions}
+👍 
+
+[06/13/2024 06:24] konfushon
+https://youtu.be/BNGkWUUG2fg?si=1y32_HrMOPLsSejD
+
+{Embed}
+Code4rena
+https://www.youtube.com/watch?v=BNGkWUUG2fg
+Size Credit code walk-through
+Learn about the Size Credit codebase and what to focus on during the June 10th - July 2nd $200k audit competition on Code4rena.
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/sddefault-0BED1.jpg
+
+{Reactions}
+👍 
+
+[06/13/2024 06:48] konfushon
+probably a very stupid question but a user(lender) can deposit USDC and the deposited USDC gets supplied into Aave v3 for yield right?
+
+{Reactions}
+👍 
+
+[06/13/2024 06:49] konfushon
+but WETH stays put into the Size contract and doesn't go anywhere
+
+{Reactions}
+👍 
+
+[06/13/2024 06:55] trachev
+Yes
+
+
+[06/13/2024 07:14] 0xtotem
+It works in each contest. Create a public or your own private thread and go for it.
+
+{Reactions}
+👍 
+
+[06/13/2024 08:05] engine_ros
+Started a thread.
+
+
+[06/13/2024 09:07] nave765
+Hey, probably a dumb question, but i having hard times understanding collateralToken, and borrowAToken? Any link?
+
+```
+    // the token used by borrowers to collateralize their loans
+    IERC20Metadata underlyingCollateralToken;
+    // the token lent from lenders to borrowers
+    IERC20Metadata underlyingBorrowToken;
+    // Size deposit underlying collateral token
+    NonTransferrableToken collateralToken;
+    // Size deposit underlying borrow aToken
+    NonTransferrableScaledToken borrowAToken;
+    // Size tokenized debt
+    NonTransferrableToken debtToken;
+```
+
+
+[06/13/2024 09:50] aviggiano
+Hey
+It looks like your project failed to correctly download. 
+Can you try cloning the repo and running forge install again?
+
+
+[06/13/2024 09:53] aviggiano
+Correct. This is by design to minimize the risk of the collateral that is backing loans
+
+
+[06/13/2024 09:55] aviggiano
+Btw the docs bot is indeed really good. Overall only correct answers. Always double check the documentation, but it helps in pointing you to the right place to confirm
+
+{Reactions}
+👍 (3) 🔥 
+
+[06/13/2024 10:18] thekmj
+Yo the bot is really good :kekw:
+
+{Reactions}
+👍 (2) 
+
+[06/13/2024 11:43] marshall1624
+Example 1 (exactAmountIn)
+Could you tell me why Candy pays exactly $80?
+Example 1 (exactAmountOut)
+Why does it also pay $88 here?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-25022.png
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-1D367.png
+
+
+[06/13/2024 11:50] aviggiano
+With exact amount in, it means you want exactly the *cash* amount to be considered (since this is a buy operation). In example 1, Candy wants to pay exactly $80 in present value.
+
+With exact amount out (ie, exact amount in equals false), it means you want exactly the *credit* amount to be considered. In example 1, Candy wants to get exactly $88 in future value. So she will not pay $88, she will get $88
+
+
+[06/13/2024 13:03] infectedfuture
+for the Example 1, shouldnt Alice rather get: `($80 - $5) * 1.1 - $0.375 = $82.125` ? As she will also have to pay for the swap fees ?
+
+
+[06/13/2024 13:06] infectedfuture
+Also, if Candy pays exactly $80, where are the additional $2.x dollars of cash coming from?
+
+
+[06/13/2024 13:22] dvrkzy999
+Imagine I lend you 100$ with 5% annual rate for 1 year so in the end I will get 105$. I have 105$ worth of credit now.
+
+I can sell some of that credit to someone but it will be at a discount (it won't count the $ accrued from the annual rate).  I will sell $10.5 worth of credit to Bob but for 10$ only (because of the discount). I get 10$ immediately and after the maturity ends Bob will get 10.5$. 
+
+The idea is that I will get 10$ early instead of waiting a whole year and Bob will become something like a partial lender. He will give 10$ to receieve 10.5$ at maturity
+
+Check out step 4 and you will get it https://discord.com/channels/810916927919620096/1247222125543162038/1250501231693271081
+
+
+[06/13/2024 13:32] aviggiano
+Hey
+Thanks for spotting this.
+There's a typo on this example. **Candy** gets $82.5 in **credit**. You can see from the calculation since, in general terms, credit = cash * (1 + rate), since to get the future value of cash you are applying the interest rate to the present value.
+
+This is the same example as `test_BuyCreditMarket_buyCreditMarket_exactAmountIn_numeric_example`, you can check it out. I'll fix the docs.
+
+
+[06/13/2024 13:34] infectedfuture
+thanks for pointing this post too, helped me to better grasp the flow 🙏
+
+{Reactions}
+❤️ 
+
+[06/13/2024 13:35] infectedfuture
+thanks checking it!
+
+
+[06/13/2024 13:37] aviggiano
+Here's the correct example (docs were updated)
+
+{Reactions}
+🫡 
+
+[06/13/2024 13:42] aviggiano
+Btw, a warden raised another issue with the docs wrt to the fragmentation fee.
+Before, they said "which is why a fixed fee is charged to the exiting lender."
+
+This is true on the context of a sellCreditMarket order. But in a BuyCreditMarket, the user responsible for the fragmentation is not the exiting lender, but instead the credit buyer.
+
+The intended behavior is that the fragmentation fee is charged to the user causing the credit split (which is logical, if you think about it — "passive" users should not pay for a credit fractionalization). This means the taker/msg.sender.
+
+I have updated the docs too
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_2024-06-13_at_10.42.52-BDE11.png
+
+{Reactions}
+🔥 (3) 
+
+[06/13/2024 14:02] aviggiano
+Started a thread.
+
+
+[06/13/2024 14:19] dvrkzy999
+does deposited ETH stay in the contract? @aviggiano
+
+
+[06/13/2024 15:27] thisvishalsingh
+Ty, solved 😃
+
+{Reactions}
+🙏 
+
+[06/13/2024 18:39] ivanchoveka
+Is it possible for arbitrary accounts to make deposit to your account
+
+
+[06/13/2024 18:44] tychaios.
+So, in this case Candy gets the $82.125 in *credit*, pays $80 in cash and Alice gets $74.625 in cash, right?
+
+
+[06/13/2024 18:55] aviggiano
+I think the correct number is "Candy gets $82.5 in credit". See here https://discord.com/channels/810916927919620096/1250806328579063888/1250812604553756833
+
+
+[06/13/2024 18:56] aviggiano
+Check out test case `test_BuyCreditMarket_buyCreditMarket_exactAmountIn_numeric_example` for this example.
+
+
+[06/13/2024 19:00] bozwkd
+```
+Total Credit = (Amount Paid - 5$) * (1 + Interest Rate)
+```
+
+
+[06/13/2024 19:01] aviggiano
+I think it's `*` instead of `+` there
+
+
+[06/13/2024 19:03] bozwkd
+It would be `+` cause `$82.5 = (80$ - 5$) * (1 + 0.10%)`
+
+
+[06/13/2024 19:04] aviggiano
+oh sorry
+
+
+[06/13/2024 19:04] bozwkd
+If it were with `*` it would be `$7.5 = (80$ - 5$) * (1 * 0.10%)`
+
+
+[06/13/2024 19:04] aviggiano
+My bad
+
+
+[06/13/2024 19:05] aviggiano
+btw this equation is explained with a lot of detail here
+https://docs.size.credit/technical-docs/contracts/3.3-market-orders
+
+{Reactions}
+🙏 
+
+[06/13/2024 20:02] ivanfitro
+how many decimals has szaUSDC?
+
+
+[06/13/2024 21:56] aviggiano
+Same as USDC, you can see that in Initialize.sol
+
+{Reactions}
+👍 
+
+[06/14/2024 04:26] thekmj
+The docs are absolutely amazing as well, very detailed and with complete examples
+
+{Reactions}
+💜 (4) 👆 (4) 💯 (4) 
+
+[06/14/2024 08:33] infectedfuture
+those are the symbols, can be found in Initialize: https://github.com/code-423n4/2024-06-size/blob/main/src/libraries/actions/Initialize.sol#L239-L251
+
+{Reactions}
+👍 
+
+[06/14/2024 15:05] anmol.eth
+@Docs Wolf When lender buy credit using `buyCreditMarket` , Who will pay the swapFee ?
+
+
+[06/14/2024 15:49] tamayonft
+Started a thread.
+
+
+[06/14/2024 15:55] anmol.eth
+if alice is holding credit , principal =100$, interest = 20%  it will be worth 120$ at expiry , she sells that credit at a discount of 15% to free up his USDC. In that case the credit buyer will pay 115$ to alice now and he will get 120$ at expiry.  
+
+As we see here we do not have a split but alice is all settled withtout any future cashflow. Does credit buyer still need to pay the fragmentation fee ?
+
+
+[06/14/2024 15:58] tamayonft
+is doc wolf mainteining the context in a thread? just like chatgpt?
+
+{Reactions}
+🤔 
+
+[06/14/2024 16:05] iam_emptyset
+No since the buyer is buying all the credit at once no fragmentation fee only alice will pay swapFee because she was the credit owner (cash receiver)
+
+{Reactions}
+👍 (2) 
+
+[06/14/2024 16:45] aviggiano
+Correct
+
+
+[06/14/2024 16:45] aviggiano
+Good question. This answer is correct: https://discord.com/channels/810916927919620096/1247222125543162038/1251205818297225337
+
+
+[06/14/2024 17:12] d_auditor
+@aviggiano When a buyCreditMarket Order is fulfilled, how does the borrower get the USDC if what they get is sza+(underlyinBorrowToken)
+
+
+[06/14/2024 17:12] d_auditor
+or is there something I am missing?
+
+
+[06/14/2024 17:19] stakog
+As I understand it the borrower gets the erc20 shares representing the USDC which actually sits in Aave, but now the borrower can call withdraw and get the USDC
+
+
+[06/14/2024 17:24] aviggiano
+Correct. When the borrower calls e.g. `sellCreditMarket`, or when a lender calls `buyCreditMarket`, the borrower gets aszUSDC. Then, the borrower must call `withdraw` to burn aszUSDC and get USDC converted 1:1
+
+
+[06/14/2024 17:32] d_auditor
+Thanks @aviggiano and @stakog
+
+
+[06/14/2024 19:51] jovemjeune
+@aviggiano So as I understand from the example 2.3.1.1 BuyCreditMarket when a partial amount of credit is bought both credit seller and credit buyer pay fragmentation fee with a slight difference and it is the fact that unlike credit buyer,the seller should pay more than fragmentation fee.He should pay fragmentation fee + swap fee.
+
+
+[06/14/2024 19:52] radev_40364
+How many `NonTransferrableScaledToken`  and `NonTransferrableToken` are going to be deployed
+
+
+[06/14/2024 19:56] aviggiano
+Hey
+Actually, in BuyCreditMarket, the buyer pays for fragmentation fees (since they are the msg.sender) and the seller pays for swap fees (since credit sellers always pay for swap fees).
+The credit seller does not pay for fragmentation fee here.
+
+{Reactions}
+👍 
+
+[06/14/2024 19:57] aviggiano
+Only the ones in Initialize.sol
+
+{Reactions}
+👍 (2) 
+
+[06/14/2024 20:07] jovemjeune
+So, I just confused by the example.In the example  Alice is the credit seller but after selling a part of her credit(80$) she gets 74.625$ in cash by paying swap fee 0.375$ and  $5 fragmentation fee.
+
+
+[06/14/2024 20:09] aviggiano
+You can see that the fragmentation fee is deducted from the credit buyer's "amount in" amount. The credit buyer puts $80, but gets only $75 worth of credit. This is why they are paying for the fees
+
+But then, the credit seller gets the net amount of $75, minus swap fees. This "net amount" is what is plugged into his yield curve to determine the future value of cash.
+
+{Reactions}
+👍 
+
+[06/14/2024 20:10] aviggiano
+I think this part also helps understanding it https://docs.size.credit/technical-docs/contracts/3.3-market-orders#id-3.3.2-buy-credit-market-order-lending-market-order
+
+{Reactions}
+👍 
+
+[06/14/2024 20:11] 0xstalin
+@aviggiano Then documentation is wrong/outdated?
+
+I understood fragmentation fee was deducted from collateral, not from received cash
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-E866F.png
+
+
+[06/14/2024 20:22] aviggiano
+No, it is correct here.
+
+The reason why fragmentation fees are paid in collateral during a `Compensate` is that the borrower may not have any deposited cash. So we charge it in collateral instead. Check out `executeCompensate`
+
+{Reactions}
+👀 
+
+[06/15/2024 06:51] konfushon
+@aviggiano on selfliquidations, the lender is the only one to self-liquidate the borrower?
+
+
+[06/15/2024 07:20] anmol.eth
+Is this a right way to imagine it @aviggiano
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-CFA3C.png
+
+
+[06/15/2024 07:43] tim_peng.
+@Docs Wolf who can innitiate the self liquidation other than the lender
+
+
+[06/15/2024 08:16] engine_ros
+exactAmountIn whether the amount parameter means credit or cash
+```
+ cash (it is off-chain credit) ?
+ Credit (it is On-chain credit) ?
+```
+
+
+[06/15/2024 08:26] manpreet027
+If you don't mind, could you please tell me which software are you using here?
+
+
+[06/15/2024 08:32] bbl4de.xyz
+probably https://excalidraw.com/
+
+{Embed}
+https://excalidraw.com/
+Excalidraw — Collaborative whiteboarding made easy
+Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/og-image-3-EF393.png
+
+{Reactions}
+✅ (3) 
+
+[06/15/2024 10:42] aviggiano
+Hello everyone
+
+
+[06/15/2024 10:42] aviggiano
+I have compiled a FAQ based off this week's questions: https://docs.size.credit/technical-docs/contracts/4.-faq
+
+{Reactions}
+💯 (2) 🐐 
+
+[06/15/2024 10:43] aviggiano
+Correct. There's a check there on `validateSelfLiquidate`
+
+
+[06/15/2024 10:43] aviggiano
+Started a thread.
+
+
+[06/15/2024 10:45] aviggiano
+Yeah
+Please note that `exactAmountIn` means opposite things in the context of `BuyCreditMarket` vs `SellCreditMarket`. 
+
+During a buy operation, you are buying credit with cash. So the amount you are putting in is cash.
+During a sell operation, you are selling credit for cash. So the amount you are putting in is credit.
+
+
+[06/15/2024 10:54] aviggiano
+great analysis!
+It's mostly correct, I've added some comments on minor mistakes
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-91070.png
+
+{Reactions}
+👍 (4) 🔥 (4) 
+
+[06/15/2024 14:16] donkicha
+Hey, guys!
+
+Sorry for the stupid question, but from where the "state" variable comes in the Size.sol?
+
+I saw that "State" is imported, but it is upper cased.
+
+
+[06/15/2024 14:22] d_auditor
+SizeStorage.sol
+
+{Reactions}
+👍 
+
+[06/15/2024 14:25] donkicha
+Yes, I noticed, but the "State" struct is imported, not "state"
+
+
+[06/15/2024 14:34] zanderbyte
+https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/SizeStorage.sol#L114
+
+{Embed}
+https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/SizeStorage.sol
+2024-06-size/src/SizeStorage.sol at 8850e25fb088898e9cf86f9be1c401a...
+Contribute to code-423n4/2024-06-size development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/a9da9e65-ed0d-4a74-ab96-c88c04a7bb2a-A130C
+
+
+[06/15/2024 14:38] d_auditor
+@aviggiano Is it right to assume that self liquidation will alway result in a loss for the lender?
+
+
+[06/15/2024 14:47] aviggiano
+Yes it is in absolute terms because it is only allowed if CR < 100%. However, check out issue 5.6.1 from Spearbit about time value of money
+
+{Reactions}
+👍 
+
+[06/15/2024 14:48] d_auditor
+I was just thinking about the TVM but thanks for the recommendation and explanation
+
+{Reactions}
+👍 
+
+[06/15/2024 15:00] 0xatharva.
+"State" is struct definition.. "state" is actual object for the struct
+
+{Reactions}
+👍 
+
+[06/15/2024 15:54] anmol.eth
+If the position is liquidatable, the Lender has the biggest reward, right? Because they get the principal + interest  instantly without waiting for the loan due date + bonus off course.
+
+
+[06/15/2024 16:08] pascal9476
+Bob calls sell credit limit and Alice sees this and fills it with buy credit market 
+Is the right flow of things ?
+
+{Reactions}
+✅ 
+
+[06/15/2024 16:12] pascal9476
+@aviggiano
+
+
+[06/15/2024 16:40] aviggiano
+It is true that the lender gets the future value instantly. However, the reward goes to the liquidator (& protocol)
+
+
+[06/15/2024 16:40] aviggiano
+What example are you referring to?
+
+
+[06/15/2024 16:40] aviggiano
+(btw I'm afk so I'll be slower to respond)
+
+
+[06/15/2024 16:46] aviggiano
+If you mean in general about creating a limit order first to then be filled by a market order, this is correct. You may check out some test cases that do that
+
+
+[06/15/2024 17:34] pascal9476
+Yh gotten it thanks
+
+
+[06/15/2024 18:45] aviggiano
+See this example: test_BuyCreditMarket_buyCreditMarket_transfers_to_borrower
+
+
+[06/15/2024 19:33] aviggiano
+https://x.com/agfviggiano/status/1802046845763330492?s=46
+
+{Embed}
+https://twitter.com/agfviggiano/status/1802046845763330492?s=46
+Antonio Viggiano (@agfviggiano) on X
+You don't want to miss my Fuzzing Workshop next Monday with @SizeCredit & @Code4rena!
+
+Whether you are participating in the contest or not, you will learn about the latest techniques we used to validate bugs from @SolidifiedHQ and @SpearbitDAO manual reviews, as well as new
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/GQIkIqvWoAAvFi8-95A6A.jpg%3Alarge
+Twitter
+
+{Reactions}
+🔥 (16) 
+
+[06/16/2024 01:15] tim_peng.
+Started a thread.
+
+
+[06/16/2024 01:32] tim_peng.
+Started a thread.
+
+
+[06/16/2024 02:19] tim_peng.
+Started a thread.
+
+
+[06/16/2024 12:25] sobieski_adam
+Size is inheriting SizeView and SizeView is inheriting SizeStorage. That's why SizeStorage variable "state" is accessible from Size
+
+{Reactions}
+👍 (2) 🙌 
+
+[06/16/2024 14:16] donkicha
+Oh yes
+
+
+[06/16/2024 14:16] donkicha
+Thank you!
+
+
+[06/16/2024 17:26] radev_40364
+@aviggiano Hey can you provide some examples to see the differences between cash/creditAmountIn/Out
+
+
+[06/16/2024 21:15] kirobrejka_80610
+@aviggiano  what's the exact `state.feeConfig.swapFeeAPR` you plan the system to operate on?
+
+
+[06/16/2024 23:23] aviggiano
+Hey
+There's an entry on the docs for all config parameters. You can also take a look on Deploy.s.sol for the deployment script
+
+
+[06/16/2024 23:24] aviggiano
+Hey
+Sure see here
+
+https://docs.size.credit/technical-docs/contracts/2.3-fees
+
+{Embed}
+https://docs.size.credit/technical-docs/contracts/2.3-fees
+2.3 Fees | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/8m5TDMd58BNJcvmwyXIB-E70F8
+
+
+[06/17/2024 01:14] engine_ros
+@aviggiano     IERC20Metadata underlyingCollateralToken;
+this token used by borrower to get loan over collateral ?
+
+IERC20Metadata underlyingBorrowToken;
+this token lent by lenders to borrowers only ?          i don't understand the role of it
+
+
+[06/17/2024 05:25] bbl4de.xyz
+Underlying collateral and borrow tokens are respectively WETH and USDC
+
+{Reactions}
+👍 (2) 
+
+[06/17/2024 05:27] bbl4de.xyz
+Borrowers deposit WETH as collateral and lenders deposit USDC to lend it when matched with a borrower. Everything about this is in the docs in more detail.
+
+
+[06/17/2024 07:47] nave765
+Hi, why does maxCashAmountIn must be muldived if params.creditPositionId not RESERVED_ID?
+
+```
+maxCashAmountIn: params.creditPositionId == RESERVED_ID ? cashAmountIn : Math.mulDivUp(creditPosition.credit, PERCENT, PERCENT + ratePerTenor)
+```
+
+
+[06/17/2024 08:04] zarkk01
+credit*1e18/(1e18 + rate) is like bringing the value of future money (credit) in today, supposedly that the cash will increase in ratePerTenor. So, if params.creditPositionId not RESERVED_ID this means that the credit (that the position already has) must be bringed in todays value depending on the ratePerTenor of the new credit position.
+
+{Reactions}
+👍 (3) 
+
+[06/17/2024 08:04] zarkk01
+this is how I understand it
+
+
+[06/17/2024 08:26] nave765
+Thanks bud.
+
+
+[06/17/2024 08:46] engine_ros
+thanks man
+
+{Reactions}
+🫡 
+
+[06/17/2024 09:16] engine_ros
+Does APR calculates the LOAN interest only or it will calculate the interest+loan+ any additional fees ?
+
+
+[06/17/2024 09:24] gd.eth
+I think it's just loan interest only 👀
+
+
+[06/17/2024 09:27] 0xstalin
+The APR determines how much interest to charge per year on X amount of Credit.
+But, APR is not the loan's absolute interest. For example, if you have an APR of 15% and the loan's duration is 2 years. The loan's absolute APR (ratePerTenor) would be 30%, cause you'll pay 15% on interest each year, so, 2 years at 15%, that makes a 30% absolute interest for this loan
+
+{Reactions}
+👍 (3) 
+
+[06/17/2024 09:29] engine_ros
+thanks man
+
+{Reactions}
+hi5 
+
+[06/17/2024 11:11] willycode20
+@aviggiano a borrower can get liquidated before the repayment deadline right???
+
+What can put a borrower in this position?
+
+
+[06/17/2024 11:13] tim_peng.
+Started a thread.
+
+
+[06/17/2024 11:18] engine_ros
+struct DebtPosition
+
+ uint256 futureValue; = is it a remaining value of loan + interest
+or it is absolute debt only of tenor ?
+
+
+[06/17/2024 11:41] aviggiano
+Hey good question
+There is no replacement deadline, if you mean liquidateWithReplacement. So anyone can call liquidate and "bypass" protocol owned bots. This is by design to put the health of the system first and the profit of the protocol second
+
+
+[06/17/2024 11:43] sangkim22
+https://discord.com/channels/810916927919620096/1247222125543162038/1250258329142296616
+According to this pictures of FE, positions seem not be separted by terms and users. Are they gonna get matched automatically? You do not need to specify the deal?
+@aviggiano
+
+
+[06/17/2024 11:53] aviggiano
+Pinging @Gao to get the exact frontend behavior. I think this will help solidify the understanding, but also note that the offchain algorithm to pick a limit order is out of scope. You can assume credit sellers and buyers can select any order they wish
+
+
+[06/17/2024 11:54] sangkim22
+Thanks for the kind reply!
+
+
+[06/17/2024 12:08] aviggiano
+This is the remaining of loan + interest. It starts off as the absolute debt amount (including interest), but then it gets decremented on repayment operations, such as in `repay`, `liquidate` and `compensate`
+
+
+[06/17/2024 13:13] .tinkering
+Yes, the best rate for the maturity selected by the user will chosen automatically. This will include aggregating multiple offers in the multicall in the case that they want to borrow more than is available in a single well-priced offer.
+
+
+[06/17/2024 14:21] modey__
+Hello @aviggiano 
+Please when does the Fuzzing Workshop begin?
+
+
+[06/17/2024 14:23] aviggiano
+Hi
+In 1h07min
+
+
+[06/17/2024 14:27] realfakepicnic
+Just getting ready to post that 🙂 ~1 hr til the Fuzzing Workshop. Meet in the Size Credit Workshops channel! https://discord.gg/xFej6z5d?event=1247992567136653426
+
+{Reactions}
+👍🏽 👍 🔥 
+
+[06/17/2024 14:29] modey__
+Alright. Thank you! I look forward
+
+
+[06/17/2024 16:03] ethel_666
+What is everyone's favorite debugging tool? Do we have anything fully integrated with vscode and foundry?
+
+
+[06/17/2024 16:06] ethel_666
+(In other words, like standard python, js, c#, or whatever debugger? I haven't found anything that's quite what I'm looking for.)
+
+
+[06/17/2024 16:31] ethel_666
+The foundry --debug option is great example of what I'm *not* looking for. Don't need to see assembly stack etc, just normal step thru with variables shown, etc.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-C55A0.png
+
+
+[06/17/2024 16:47] aviggiano
+Amazing, I've never used that. 
+I'll try it later.
+
+
+[06/17/2024 16:49] ethel_666
+It's pretty much useless to me. I need to see variable values printed out in an easy to read manner, with step in, step out, etc.
+
+{Reactions}
+😢 
+
+[06/17/2024 16:49] ethel_666
+This is more like a giant assembly breakdown.
+
+
+[06/17/2024 16:50] aviggiano
+Have you tried runtime verification's tool?
+
+
+[06/17/2024 16:50] aviggiano
+https://simbolik.runtimeverification.com/
+
+{Embed}
+https://simbolik.runtimeverification.com/
+Simbolik: Next-Generation Smart Contract Debugging
+ERC token development, testing, compliance, and conformance for ERC smart contracts from the Simbolik developers at Runtime Verification.
+
+
+[06/17/2024 16:51] aviggiano
+Maybe that's more similar to what you are saying. However, it's still in beta it seems
+
+
+[06/17/2024 16:59] ethel_666
+That's looking much better! But appears to not really be available yet. Waitlist.
+
+
+[06/17/2024 16:59] ethel_666
+Closest I've found is Solidity Debugger Pro, but getting it to work with Foundry hasn't been possible for me. https://marketplace.visualstudio.com/items?itemName=robertaachenw.solidity-debugger-pro
+
+{Embed}
+https://marketplace.visualstudio.com/items?itemName=robertaachenw.solidity-debugger-pro
+Solidity Debugger Pro - Visual Studio Marketplace
+Extension for Visual Studio Code - Standalone debugger for Solidity
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Microsoft.VisualStudio.Services.Icons-A18A3.Default
+
+
+[06/17/2024 17:01] ethel_666
+It's also kind of a alpha or beta type of product and seems to be missing some features, such as showing the "value" variable.
+
+
+[06/17/2024 17:02] ethel_666
+But the advantages of this type of thing make a strong case for migrating from Foundry, if they can ever get the wrinkles ironed out. That debugger is just so helpful you really can't go back to not having it!
+
+
+[06/17/2024 17:17] ethel_666
+I'm gonna try to get your project rolling with SDP. Will let you know how it goes.
+
+{Reactions}
+🔥 
+
+[06/17/2024 17:21] iam_emptyset
+@aviggiano I missed the workshop was it recorded please?
+
+{Reactions}
+👍 
+
+[06/17/2024 17:22] realfakepicnic
+yes, we're putting that together and will share as soon as it's ready 🙂
+
+{Reactions}
+👍 (4) 10_10 
+
+[06/17/2024 20:11] kartoonjoy
+🤖 **Documentation bot assistance**: For general questions about the codebase, give our documentation bot a try, by __tagging @Docs Wolf in any thread (private or public) and asking your question__. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.
+
+{Reactions}
+🔥 (2) 👍 (2) ❤️ (2) 
+
+[06/17/2024 23:44] realfakepicnic
+@🐺Wardens here's a recording of today's fuzzing workshop with @aviggiano, in case you weren't able to join: https://youtu.be/tShSMDVoBf8?si=l32aUU3zEvou-iJC
+
+{Embed}
+Code4rena
+https://www.youtube.com/watch?v=tShSMDVoBf8
+Size Credit Fuzzing Workshop
+In addition to the code walk-through Antonio from Size did last week, here's a fuzzing workshop to help you learn what to focus on during the June 10th - July 2nd $200,000 audit competition on Code4rena.
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/sddefault-B8EAC.jpg
+
+{Reactions}
+🔥 (13) 👍 
+
+[06/18/2024 02:44] 0xpetern
+can someone explain to me what the RESERVE ID is used for?
+
+
+[06/18/2024 02:47] 0xstalin
+If RESERVE_ID is used:
+- when SellingCreditMarket, caller(CreditSeller) is a borrower who wants to take a new loan... a.k.a borrowing
+- when BuyingCreditMarket, caller (CreditBuyer) is a lender who wants to create a new loan ... a.k.a lending
+
+{Reactions}
+👍 (3) 
+
+[06/18/2024 02:50] 0xstalin
+is basically used to differentiate when the market order is for a new CreditPosition (if RESERVER_ID is used), or, if the market order is for an existing CreditPosition (when params.creditPosition is not RESERVE_ID)
+
+{Reactions}
+👍 (2) 
+
+[06/18/2024 03:02] 0xpetern
+Thank you. I got the concept mixed up initially.
+
+
+[06/18/2024 06:45] nave765
+Hi, anyone know what is the return value of this?
+```
+state.oracle.priceFeed.getPrice()
+```
+
+
+[06/18/2024 07:16] thisvishalsingh
+`state.oracle.priceFeed.getPrice()` fetches the current price of the asset from the oracle that will be return value. This price is used to convert the `debtTokenAmount` to the equivalent `collateralTokenAmount`.
+
+
+[06/18/2024 07:17] infectedfuture
+also you can check into src/oracle/PriceFeed.sol
+
+
+[06/18/2024 07:17] nave765
+Does it have decimals as the return value?
+
+
+[06/18/2024 07:18] nave765
+Ooh, yeah haven't checked that out yet. Thanks
+
+{Reactions}
+🫡 
+
+[06/18/2024 07:22] thisvishalsingh
+yea.
+
+
+[06/18/2024 07:25] pascal9476
+Which is the borrow time and which is the collateral token
+
+
+[06/18/2024 07:37] 0xstalin
+borrow: usdc
+collateral: weth/eth
+
+{Reactions}
+👍 
+
+[06/18/2024 07:38] 0xstalin
+eth/usdc expressed in 18 decimals, check `src/oracle/PriceFeed.sol`
+
+{Reactions}
+👍 
+
+[06/18/2024 07:42] nave765
+Thanks
+
+
+[06/18/2024 07:42] nave765
+Thanks
+
+{Reactions}
+👍 
+
+[06/18/2024 12:19] 0x4non_
+Has anyone managed to run Echidna?
+
+I have this error: 
+```
+echidna: Couldn't compile given file
+stdout:
+stderr:
+usage: crytic-compile contract.sol [flag]
+crytic-compile: error: unrecognized arguments: --foundry-compile-all
+```
+
+
+[06/18/2024 12:20] mylifechangefast.eth_70767
+@aviggiano please check private thread
+
+{Reactions}
+👍 
+
+[06/18/2024 13:49] aviggiano
+We're using Echidna 2.2.3 with cryric-compile latest & slither latest
+I believe this is the issue
+
+{Reactions}
+👍 (2) 
+
+[06/18/2024 15:52] ethel_666
+Started a thread.
+
+
+[06/19/2024 02:38] saneryee
+same errror. I have two versions of crytic-compile installed on my Mac (one installed via brew and another via pip3). After uninstalling the older version using `pip3 uninstall`, everything is working fine now.
+
+{Reactions}
+👍 (2) 
+
+[06/19/2024 04:05] engine_ros
+struct LiquidateWithReplacementParams
+what is  
+```  uint256 minimumCollateralProfit; ```
+is it profit calculation of collateral which is deposit by borrower and liquidator get the profit by liquidating it ?
+
+
+[06/19/2024 04:16] engine_ros
+``` function executeLiquidateWithReplacement ```
+  This function will liquidate the position of a borrower
+ who has transferred their debt position to another borrower
+
+
+[06/19/2024 07:28] berndt_
+Not a vulnerability but what's reasoning idea behind calling `validateVariablePoolHasEnoughLiquidity` on lending and borrowing? What if users legitimately want to borrow ATokens when liquidity in the VariablePool is very low (even if they can't immediately withdraw them) since yield would be high? Or is there some bigger-picture idea behind it?
+
+
+[06/19/2024 07:46] 0xstalin
+because if there is no liquidity in the VariablePool (ex: Aave), the borrowed tokens (szaUSDC) are practically unusable outside of the protocol, borrowedTokens are not transferable, they can only be withdrawn for the underlying  token (USDC), and all the USDC of the contracts is deposited in Aave, so, if Aave has not liquidity && the borrow is not reverted, the borrower would practically be paying interests on an unusable token for all the period of time till the Variable Pool gets enough liquidity to allow the borrower to withdraw the amount of borrowed tokens as USDC from it
+
+{Reactions}
+👍 (3) 
+
+[06/19/2024 07:59] berndt_
+Right, but there might be borrowers who are willing to hold `borrowATokens` even though they're not withdrawable or transferrable, simply because of the rebasing, if the yield is higher than the interest on the fixed loan. Ideally the market would sort itself out. On the other hand I understand that you want to protect borrowers from borrowing 'unusable' tokens. Not sure what the 'correct' thing to do is here
+
+EDIT: not "getting dumped on"
+
+
+[06/19/2024 08:08] 0xstalin
+is not like they are dumped with the borrowToken, they are protected from borrowing when there is no liquidity to cash out the borrowToken for the underlying asset.
+
+I see what you are saying, and I would say that the right thing to do is to prevent a borrower from borrowing when the VariablePool has not liquidity. I think is better to protect a user from something that would impact them negatively rather than allow them to do things they'd like to do at the expense of exposing a negative risk for such allowed behavior
+
+{Reactions}
+👍 (2) 
+
+[06/19/2024 08:09] berndt_
+Yeah, either way is fine. I'll be interesting to see how the protocol behaves IRL
+
+{Reactions}
+👀 
+
+[06/19/2024 09:44] mylifechangefast.eth_70767
+:chefskiss:
+
+
+[06/19/2024 10:36] zkillua.dev
+In section - 3.3.2 Buy Credit Market Order (lending market order) - 
+`The main use case has been envisioned for that is to allow borrowers to exit their positions before the due date, without forfeiting the full-term interest.`
+Can somebody explain if this is correct?
+
+
+[06/19/2024 11:42] aviggiano
+This is a good point, but hard to enforce the desired behavior in reality. Although some users may "price in" the unsolvency risk of Aave, others would not. So we take the safer approach and stop all trades of cash to prevent users from getting "dumped" aUSDC if it is not redeemable for USDC
+
+{Reactions}
+👍 
+
+[06/19/2024 11:43] aviggiano
+After all, this is a ETH/USDC market, not a ETH/aUSDC one. The Aave deposit is just an yield optimization strategy.
+
+
+[06/19/2024 11:46] aviggiano
+It is correct because we expect more users to actively borrow than to actively lend. But this is just an expectation of the market behavior. Lenders can also submit buy credit market orders actively if they want. 
+
+For a borrower exit, check out the Compensate entry on the docs.
+
+{Reactions}
+👀 
+
+[06/19/2024 12:51] mylifechangefast.eth_70767
+Is it a normal way for you to be able to withdraw all your WETH deposited from the size contract? @aviggiano
+
+
+[06/19/2024 12:57] aviggiano
+Yes you should be able to withdraw all your collateral, provided you have a healthy collateral ratio. Check out test case `test_Withdraw_withdraw_everything_general`
+
+{Reactions}
+✅ (2) 
+
+[06/19/2024 13:00] mylifechangefast.eth_70767
+In our private thread please check.
+
+{Reactions}
+👍 
+
+[06/19/2024 13:17] kartoonjoy (pinned)
+🚨Wardens, when you create your threads to communicate with the sponsor, please add your C4 username to the thread title to make it easier for the sponsor to follow.
+
+Thanks!
+
+{Reactions}
+🙏 (4) 🫡 (3) 
+
+[06/19/2024 13:53] kartoonjoy
+Also, No DM's please. Threads (public or private) only!
+
+
+[06/19/2024 14:07] tamayonft
+all the issues in past audit are already resolved?
+
+
+[06/19/2024 14:10] aviggiano (pinned)
+They were resolved but not reviewed by the auditors. 
+We encourage wardens to pay special attention to the areas that have gone through significant change because of the fixes https://github.com/code-423n4/2024-06-size/tree/8850e25fb088898e9cf86f9be1c401ad155bea86?tab=readme-ov-file#attack-ideas-where-to-focus-for-bugs
+It is possible that bugs exist elsewhere, but it is more likely that they exist in these areas
+
+
+[06/19/2024 14:16] kartoonjoy
+Pinned a message.
+
+
+[06/19/2024 16:09] kartoonjoy
+Pinned a message.
+
+
+[06/19/2024 17:54] ethel_666
+Has anybody found a Solidity vs code extension that actually works?
+
+
+[06/19/2024 17:57] ethel_666
+For example, being able to correctly find definitions of objects? Especially when there is inheritance, the normal extensions don't seem to know where anything is.
+
+
+[06/19/2024 17:58] ethel_666
+Basically just looking for a normal type of dev experience such as with coding in c#, python, js, vb, or basically anywhere.
+
+
+[06/19/2024 18:00] ethel_666
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-30509.png
+
+
+[06/19/2024 18:00] ethel_666
+Good example shown.
+
+
+[06/19/2024 18:00] babs2833
+some people have had luck with intelliJ. Inheritance easy-clicking rarely works in VSCode for solidity (seems pretty random). Most people use Solidity Visual Developer, but again inheritance-linkage doesnt work most of the time
+
+{Reactions}
+👍 (4) 
+
+[06/19/2024 18:02] ethel_666
+Really is sad considering how much money is at stake with respect to code correctness, etc.
+
+{Reactions}
+👍 (2) 
+
+[06/19/2024 18:02] ethel_666
+Python now has fantastic tools and it's mostly just for dirty scripting.
+
+
+[06/19/2024 18:06] ethel_666
+Solidity Visual Developer looks slightly better than the others I tried. Thanks.
+
+
+[06/19/2024 21:14] ethel_666
+One thing I've discovered is that if you change all imports to relative imports (no remappings either) the IDE seems much less confused.
+
+{Reactions}
+🔥 (2) 👀 (2) 
+
+[06/19/2024 21:14] ethel_666
+Like this:
+
+
+[06/19/2024 21:15] ethel_666
+// import {BaseTest} from "@test/BaseTest.sol";
+import {BaseTest} from "../../BaseTest.sol";
+
+
+[06/20/2024 01:21] engine_ros
+@aviggianohttps://docs.size.credit/technical-docs/contracts/2.3-fees
+
+are these documentation updated  to the latest?
+
+{Embed}
+https://docs.size.credit/technical-docs/contracts/2.3-fees
+2.3 Fees | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/8m5TDMd58BNJcvmwyXIB-E70F8
+
+
+[06/20/2024 01:53] .tinkering
+they should be, but were written in a rush so may have some inconsistencies still
+
+
+[06/20/2024 01:54] .tinkering
+aviggiano can confirm tomorrow if you have any specific questions about them
+
+
+[06/20/2024 02:01] engine_ros
+yes, inconsistencies
+
+
+[06/20/2024 02:05] .tinkering
+feel free to start a thread if you don't have one going already
+
+
+[06/20/2024 03:53] engine_ros
+Started a thread.
+
+
+[06/20/2024 06:56] berndt_
+Just to be clear, the fees should always be fully covered by the borrower right?
+
+
+[06/20/2024 08:50] zarkk01
+I have this question too. Both swap fees and frag fees should be covered by him who gets the money?
+
+
+[06/20/2024 08:57] 0xstalin
+swapFees are paid by the cash receiver, fragmentationFee is paid by whoever causes the fragmentation
+
+{Reactions}
+✅ (3) 
+
+[06/20/2024 09:11] engine_ros
+what is fragmentation ?
+
+
+[06/20/2024 09:14] 0xstalin
+when a new credit position is created due to not selling/buying all the credit of an existing credit position
+
+{Reactions}
+👍 (4) 
+
+[06/20/2024 09:22] mylifechangefast.eth_70767
+@aviggiano please check dm
+
+{Reactions}
+👍 
+
+[06/20/2024 11:11] aviggiano
+Sure
+Btw I'm usually online after 12h00 UTC, so if I don't respond try the @Docs Wolf first
+
+{Reactions}
+✅ 
+
+[06/20/2024 11:20] mylifechangefast.eth_70767
+My messages awaits you😅
+
+
+[06/20/2024 20:09] m4k2
+hey, can someone explain exactly what are the purpose of `collateralToken`, `borrowAToken` and `debtToken`: 
+
+```
+struct DataView {
+    // The next debt position ID
+    uint256 nextDebtPositionId;
+    // The next credit position ID
+    uint256 nextCreditPositionId;
+    // The underlying collateral token
+    IERC20Metadata underlyingCollateralToken;
+    // The underlying borrow token
+    IERC20Metadata underlyingBorrowToken;
+    // The collateral token
+    NonTransferrableToken collateralToken;
+    // The borrow aToken
+    NonTransferrableScaledToken borrowAToken;
+    // The debt token
+    NonTransferrableToken debtToken;
+    // The variable pool
+    IPool variablePool;
+}
+```
+
+
+[06/20/2024 21:26] radev_40364
+Guys do you know who is intended to pay the fees in buy/sellCreditMarket functions, the lender or the borrower?
+
+
+[06/20/2024 21:29] tychaios.
+swap fees borrower, fragmentation (if any) lender I think
+
+
+[06/20/2024 21:43] iam_emptyset
+Always cash receiver pay swapFee while fragmentation fee is initiator (msg.sender)
+
+{Reactions}
+👍 (2) 
+
+[06/20/2024 21:52] aviggiano
+Correct
+
+
+[06/21/2024 01:26] engine_ros
+Started a thread.
+
+
+[06/21/2024 04:29] berndt_
+In practice, who is meant to call `liquidateWithReplacement`? Mainly Size's bot right?
+
+
+[06/21/2024 05:23] bitdoctor0524
+DM
+
+
+[06/21/2024 06:19] thisvishalsingh
+The primary actors for calling `liquidateWithReplacement` are indeed Size's bots, as part of their role in managing the liquidation process efficiently and maintaining the health of the platform.
+
+{Reactions}
+👍 
+
+[06/21/2024 06:24] berndt_
+The reason I ask is because `liquidatorProfitBorrowToken` goes to the protocol
+
+{Reactions}
+👍 
+
+[06/21/2024 08:37] zkillua.dev
+@aviggiano do check my private thread whenever possible.
+
+{Reactions}
+👍 
+
+[06/21/2024 11:29] guy_in0xnito
+@aviggiano  any issues occurring from price feed.sol 
+Is oos right ?
+
+
+[06/21/2024 11:35] aviggiano
+No, not all issues. The only issues out of scope are those listed on "Known issues" https://github.com/code-423n4/2024-06-size
+
+
+[06/21/2024 13:10] tim_peng.
+Started a thread.
+
+
+[06/22/2024 08:53] asui0944
+what will be the value of min and max tenor?
+
+
+[06/22/2024 08:54] kartoonjoy
+🤖 **Documentation bot assistance**: For general questions about the codebase, give our documentation bot a try, by __tagging @Docs Wolf in any thread (private or public) and asking your question__. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.
+
+{Reactions}
+👍 (3) 
+
+[06/22/2024 13:15] aviggiano
+hi there, I'm online
+will answer questions rn
+
+{Reactions}
+🔥 (4) 
+
+[06/22/2024 14:49] gd.eth
+Hi, is it permissible to continue selling after selling a portion of a credit position?
+
+
+[06/22/2024 15:08] aviggiano
+Started a thread.
+
+
+[06/22/2024 15:26] aviggiano (pinned)
+https://x.com/agfviggiano/status/1804527438271021392?s=46
+
+{Embed}
+https://twitter.com/agfviggiano/status/1804527438271021392?s=46
+Antonio Viggiano (@agfviggiano) on X
+New code walkthrough for @SizeCredit is out!
+
+The content is similar to that of @code4rena’s workshop but focuses on the design decisions and best practices we used while implementing the protocol.
+Twitter
+
+{Reactions}
+🔥 (3) 
+
+[06/22/2024 15:47] aviggiano
+Btw I'm afk so I might be slower to respond
+
+
+[06/22/2024 17:00] kartoonjoy
+Pinned a message.
+
+
+[06/22/2024 21:13] asui0944
+is there any older version or a currently deployed version of the codebase? If any can someone please paste the link here
+
+
+[06/22/2024 22:47] aviggiano
+Started a thread.
+
+
+[06/23/2024 02:32] anmol.eth
+I'm still confused on the borrower exit early vs compensate. Can anyone please explain this to me? @aviggiano
+
+
+[06/23/2024 05:51] coffiasd
+can i create a private channel in this contest
+
+
+[06/23/2024 06:12] radev_40364
+do we know the address of the variable pool?
+
+
+[06/23/2024 07:06] thisvishalsingh
+You can see `Deploy.sol`
+
+
+[06/23/2024 07:19] mylifechangefast.eth_70767
+Tch
+
+
+[06/23/2024 07:20] mylifechangefast.eth_70767
+What are you trying to find👀🤔
+
+
+[06/23/2024 08:12] sangkim22
+@aviggiano Is there a specific reason for the following code structures? Why if else is not used in Buycreditmarket?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_2024-06-23_at_5.11.55_PM-EBF03.png
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/Screenshot_2024-06-23_at_5.12.01_PM-963A1.png
+
+
+[06/23/2024 08:29] _heeze
+In the buyCreditMarketParams and sellCreditMarketParams the exactAmountIn parameter signifies if the amountIn is cash or credit what does this mean and what happens in either scenario?
+
+
+[06/23/2024 09:40] zkillua.dev
+the first image: you create debt-credit Positions for borrower first (if reserved), then transfer the credit position to lender. if not reserved, just transfer the credit position to a lender.  In bothcases, transferring credit position to lender is common. hence you dont have "else".
+
+{Reactions}
+👍 (2) 
+
+[06/23/2024 09:40] tim_peng.
+has anyone come accross this problem after running forge test: proptest: Aborting shrinking after the PROPTEST_MAX_SHRINK_ITERS environment variable or ProptestConfig.max_shrink_iters iterations (set 0 to a large(r) value to shrink more; current configuration: 0 iterations)
+
+
+[06/23/2024 09:44] zkillua.dev
+if params.amount is credit, then it calculate equivalent cash needs to be transferred(with fees) .
+if params.amount is cash, then it calculate equivalent credit borrower owes at maturity .
+
+
+[06/23/2024 09:49] _heeze
+so when exactAmountIn is true or false what happens
+
+
+[06/23/2024 09:51] zkillua.dev
+if it's true, it means params.amount is credit, else cash.
+
+
+[06/23/2024 09:56] anmol.eth
+I will try to answer  someone correct me if i'm wrong 
+
+If you have a look into `buyCreditMarket` then it is creating a debt position for the borrower(picked from order book) and credit position for lender(msg.sender). Here we don't need to again create a creditPosition for lender. 
+
+ In a else block if we already have debtPosition then we simple create another credit position for lender. 
+
+But incase of `sellCreditMarket` This is the flow if I'm not wrong 
+
+1. Borrower calls sellCreditMarket by picking lender from orderbook 
+2.  Debt position for borrower is created, also Credit position for borrower(not lender) is created. This is little weird because we generally think that credit position should be for lender. 
+
+3. Now After escaping if block, the credit owned by a borrower is sold to lender who had a limit order in orderbook by creating a new creditPosition for a lender. 
+
+It is like borrower hold the credit position for instant and sell it immediately to desired lender.
+
+{Reactions}
+👍 (2) 
+
+[06/23/2024 11:06] aviggiano
+hi there
+I'm up
+will start answering questins
+
+
+[06/23/2024 11:07] aviggiano
+Started a thread.
+
+
+[06/23/2024 11:09] aviggiano
+Started a thread.
+
+
+[06/23/2024 11:10] aviggiano
+Started a thread.
+
+
+[06/23/2024 11:15] aviggiano
+correct, thanks for the contribution
+
+About point (2), I agree this is weird.
+
+The reason we create debt/credit to the msg.sender first, and then exit it to the `params.lender`, is that we can calculate the exact amount of future value the borrower wants on the previous logic of `getCashAmountOut` /`getCreditAmountIn`
+
+On a previous design, we had this "create debtposition/creditposition pair" (or mint credit) operation on a separate function. It was called `mintCredit` and it would allow you to specify a future value and due date for the credit that you could later resell. But this would make it hard to perform a simple borrow exact, because of swap fees and rounding. So we internalized this mint credit to msg.sender operation in sellCreditMarket and compensate
+
+{Reactions}
+👍 
+
+[06/23/2024 12:03] aviggiano
+Started a thread.
+
+
+[06/23/2024 13:54] fandonov
+What will be the value of minimumCreditBorrowAToken in the RiskConfig struct in SizeStorage.sol?
+
+
+[06/23/2024 13:56] nave765
+50e6 based on the documentation
+
+{Reactions}
+🙏 (2) 👍 
+
+[06/23/2024 14:10] zkillua.dev
+5e6. you can check Deploy.sol for such values.
+
+{Reactions}
+🙏 
+
+[06/23/2024 14:49] zkillua.dev
+from a  lender's POV, liquidate and liquidateWithReplacement are same? No additional  benefits to the lender?
+
+
+[06/23/2024 15:28] aviggiano
+The local test values are different than the production values. Check out the docs for the real params: https://docs.size.credit/technical-docs/governance-variables-and-fees
+
+{Embed}
+https://docs.size.credit/technical-docs/governance-variables-and-fees
+Governance Variables & Fees | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/sZTfZWGTep9VuxxrTOcX-7053D
+
+
+[06/23/2024 15:29] aviggiano
+They should be the same for the lenders. The only thing that changes is that in liquidate they receive the money before the due date.
+
+
+[06/23/2024 15:30] anmol.eth
+@aviggiano
+
+
+[06/23/2024 15:32] aviggiano
+Sure check out this test case test_Compensate_compensate_used_to_borrower_exit_before_tenor_1
+
+
+[06/23/2024 20:35] 0xhacksmithh
+@aviggiano Hi Sir, Made a PT, have a look whenever you have free time, thanks
+
+
+[06/24/2024 04:55] guy_in0xnito
+@aviggiano mentioned you in PT. Sir
+
+
+[06/24/2024 09:02] squilliamx
+hi guys i reading the docs and i was hoping to receive some clarification as i am a little confused. The docs say:
+"For example, Jim lends 100 USDC at 5% interest for 12 months, so the future value of the loan is 105 USDC (the amount he'll receive 12 months from now). After 6 months, Jim exits to another lender, Kline, with an interest rate of 4%. Kline will now receive the 105 USDC from the borrower at maturity, and thus now has to pay Jim the discounted cash value 105 / (1 + 0.04 * 6/12) = 102.9 USDC. Kline's 102.9 goes to Jim now, who realizes a 2.9% profit on his initial 100 he lent out, and Kline collects his 105 (including the 2.1 USDC profit) upon repayment by the borrower. " If Jim exits his lending position to Kline, and the rate changes from 5% to 4%, then why does Kline still receive $105 instead of $104 at maturity?  If the rate changed to 4%, shouldn't kline receive $104 at maturity? why do the docs say he still receives $105 at a 4% interest rate?
+
+
+[06/24/2024 09:12] stakog
+Because from the borrower's point of view nothing changed. He still need to repay a future value of 105$. So 105$ in this situation (when one lender exits to another lender) can be considered a constant. Kline pays Jim 102.9$ and will receive from the borrower 105$ so from Jim's perspective he made 4% profit (actually 2% because half of the tenor has passed)
+
+
+[06/24/2024 10:41] thisvishalsingh
+What is `YEAR` here: https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/libraries/AccountingLibrary.sol#L165
+
+
+[06/24/2024 10:43] iam_emptyset
+Think of it this way if Kline's interest is 5% he would have received 2.5 USDC for six months but in stead he got only 2.1 which is ~ 4% of 100 for six months
+
+
+[06/24/2024 10:46] iam_emptyset
+365 days
+
+{Reactions}
+👍 
+
+[06/24/2024 10:55] engine_ros
+uint256 constant RESERVED_ID = type(uint256).max;
+
+this variable is used to create ID's only ?
+
+
+[06/24/2024 11:08] aviggiano
+Hello I'm online, will start answering questions
+
+
+[06/24/2024 11:09] aviggiano
+This is answered in the FAQ https://docs.size.credit/technical-docs/contracts/4.-faq
+
+{Reactions}
+👍 
+
+[06/24/2024 12:35] pkqs90
+`SOLVENCY_02: SUM(credit) <= SUM(debt)`. Should this be `SUM(credit) >= SUM(debt)` instead?
+
+
+[06/24/2024 12:46] aviggiano
+Hey
+good question
+In reality, this should be explicitly equal. Any inequality between credit and debt is a big issue for the protocol.
+
+- If credit > debt, it means creditors can take more money from what debtors owe. This is similar to printing money, and the protocol is not solvent
+- If credit < debt, it means debtors owe more than what the other party can redeem later. This means debtors are been overcharged. It is less impactful than the previous inequality, but it is still bad
+
+You can check in another invariant that a strict equality is also checked
+
+
+[06/24/2024 12:52] pkqs90
+If we take liquidation into account, credit > debt is also a valid case? Since liquidation decreases debt but doesn't change credit - credit is only reduced when the lender claims
+
+
+[06/24/2024 12:55] paulbirnbaum
+@aviggiano Why reduce the credit in the CreditPosition , create another CreditPosition and set the credit in it in BuyCreditMarket::executeBuyCredit ? 
+
+In that way there is now 2 creditPosition with the same debtPositionId ? What's the matter ?
+
+
+[06/24/2024 12:57] aviggiano (pinned)
+Good point
+In reality, the property definition is a bit simplified, just for the sake of making it obvious that we shouldn't be printing money. But the strict definition is "outstanding credit", which means credit from non-repaid loans. This is what is implemented in `Properties.sol`
+
+Total credit can be different than debt as the lifetime of a loan goes by.
+
+Example 1
+1. Alice borrows $100 from Bob. Alice has 100 debt and Bob has 100 credit
+2. Alice repays. Now Alice has 0 debt but Bob has 100 credit. So the strict equality does not hold, because Bob can now claim the repaid money
+
+Example 2
+1. Alice borrows $100 from Bob. Alice has 100 debt and Bob has 100 credit
+2. Bob sells 30 of his credit to Candy. Now Alice has 100 debt, Bob has 70 credit, Candy has 30 credit. The strict equality holds because both Bob and Candy can claim their owed money when Alice repays
+
+So if you take into account only non-repaid loans, the strict equality should always hold, otherwise you'd be printing money
+
+Example 3 (buggy)
+1. Alice borrows $100 from Bob. Alice has 100 debt and Bob has 100 credit
+2. Bob sells 30 his credit to Candy. Now Alice has 100 debt, Bob has 71 credit, Candy has 30 credit, maybe because of a rounding error. This means money was printed, and it is a critical issue. After Alice repays, Bob+Candy would be entitled to more than what was repaid.
+
+{Reactions}
+👍 (9) 
+
+[06/24/2024 13:01] pkqs90
+Great explaination. Thanks!
+
+
+[06/24/2024 13:54] kartoonjoy
+Pinned a message.
+
+
+[06/24/2024 16:22] anmol.eth
+How many issue will be found any guesses? 😕
+
+{Reactions}
+🔟 (9) 7️⃣ (3) 4️⃣ (3) 👀 (2) 5️⃣ (3) 
+
+[06/24/2024 19:06] .tinkering
+All of the issues. 💪
+
+{Reactions}
+💪 (6) 
+
+[06/25/2024 05:18] pinchaschaim
+Hello...
+
+
+[06/25/2024 06:38] anmol.eth
+Why every function in size is payabe to save gas?
+
+
+[06/25/2024 06:44] zanderbyte
+"All functions are `payable` to allow for ETH deposits in a `multicall` pattern."
+
+{Reactions}
+👍 
+
+[06/25/2024 08:08] thisvishalsingh
+Who are competitors of this protocol?
+
+
+[06/25/2024 10:19] tim_peng.
+Started a thread.
+
+
+[06/25/2024 10:37] tim_peng.
+Started a thread.
+
+
+[06/25/2024 10:52] aviggiano
+hello
+
+
+[06/25/2024 10:52] aviggiano
+Also, check out `IMulticall.sol`, it has a lot of references of why we did it this way
+
+
+[06/25/2024 11:21] 0xarno
+how borrower can exit early ?
+
+
+[06/25/2024 12:07] 0x04bytes
+hello @aviggiano, is invariant violation with insignificant impact on the protocol still be considered as a bug?
+
+
+[06/25/2024 12:15] aviggiano
+In general, yes. When the invariant breaks, then it is either a bug or the invariant is wrong (which can happen, so not a bug)
+
+
+[06/25/2024 14:48] asui0944
+```} else if (Strings.equal(params.key, "minTenor")) {
+            if (
+                state.feeConfig.swapFeeAPR != 0
+                    && params.value >= Math.mulDivDown(YEAR, PERCENT, state.feeConfig.swapFeeAPR)
+            ) {
+                revert Errors.VALUE_GREATER_THAN_MAX(
+```
+what exactly are we checking here?
+
+
+[06/25/2024 14:52] aviggiano
+This is explained on the FAQ
+https://docs.size.credit/technical-docs/contracts/4.-faq
+
+{Reactions}
+💯 👍 
+
+[06/25/2024 15:12] parthmandale
+@aviggiano  ser please check my Private thread
+
+{Reactions}
+👍 
+
+[06/25/2024 15:47] zkillua.dev
+@aviggiano pls check my PT whenever possible.
+
+{Reactions}
+👍 
+
+[06/25/2024 16:55] zkillua.dev
+debtToken has 6 decimals ? same as underlying debt token=usdc=6 decimals?
+
+{Reactions}
+✅ (4) 
+
+[06/25/2024 22:31] squilliamx
+can i deposit weth into the protocol? or can i only deposit ETH into the protocol? i know the withdrawal is WETH and not ETH but how about the deposit?
+
+
+[06/25/2024 22:32] tychaios.
+ETH is wrapped if you choose to deposit ETH
+
+
+[06/25/2024 22:34] squilliamx
+yes but can i choose to deposit WETH?
+
+
+[06/25/2024 22:36] tychaios.
+Yes
+
+{Reactions}
+👍 (2) 
+
+[06/26/2024 11:45] jaimegm_
+Hello @aviggiano , In the docs, in section "Illustration of Borrower Liquidation (w/ replacement borrower)", it states: "The advantage here is that we have more USDC (technically denominated in ETH) to pay back to Borrower A. In the previous example without a replacement borrower, there was a remainder of 510 USDC. Here we see 538 USDC. The keeper/liquidator and protocol earn a bit extra as well, and a bid from the Borrowing Bid Offer Book is filled while Lender A still receives the expected amount on the due date." I do not see how the liquidator and the Borrower A get more money back when compared to getting just liquidated. The only difference I see is that the protocol gets more money. Is the documentation wrong or am I missing something?. Thanks!
+
+
+[06/26/2024 14:03] 0xnbvc
+Why are `aprs` and `marketRateMultipliers` not validated in `YieldCurveLibrary::validateYieldCurve()`?
+
+https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/libraries/YieldCurveLibrary.sol#L58-L59
+
+https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/libraries/YieldCurveLibrary.sol#L76-L77
+
+
+[06/26/2024 15:24] 0xarno
+who will be the recipient of the fragmentationFee?
+
+
+[06/26/2024 15:40] .tinkering
+protocol/multisig, eventually a dao
+
+
+[06/26/2024 15:43] 0xarno
+sir are you the sponsor for this contest ? i am asking because i have some question to ask in pt
+
+
+[06/26/2024 15:44] .tinkering
+yes
+
+
+[06/26/2024 17:44] thisvishalsingh
+` K = (1+r)/(1-kDeltaT), Where it comes from sellCreditMarket exactAmountIn=false ?`https://docs.size.credit/technical-docs/contracts/3.3-market-orders#id-3.3.1-sell-credit-market-order-borrowing-market-order
+
+
+[06/26/2024 18:31] aviggiano
+Started a thread.
+
+
+[06/27/2024 01:30] gd.eth
+What are the incentives for self-liquidation?
+
+
+[06/27/2024 01:49] ericwillworkforcryptopunks
+@aviggiano please check DM when you can.
+
+
+[06/27/2024 05:36] benrai
+You take a loss on a loan you gave to a borrower but thereby you stop your exposure to this loan. So you cap the loss you take no the loan which could get even higher if the collateral value falls further
+
+{Reactions}
+👍 
+
+[06/27/2024 05:59] gd.eth
+much thanks.
+I am confused about this, self-liquidation has a limit of no more than 100% collateral ratios, 
+so why not liquidate debt positions that are underwater before then, which may be more profitable.
+Thank you I understand a little better now!
+
+
+[06/27/2024 06:04] benrai
+self-liquidation is mend to be used when no one else will liquidate the position becasue the liquidation is not profitable (cr < 100%). If a lender sees that his borrower is under water he can still call the "normal" liquidate and make a profit on the liquidation
+
+{Reactions}
+👍 (2) 
+
+[06/27/2024 06:08] gd.eth
+It seems that the results are the same for both types of liquidation🤔
+
+
+[06/27/2024 06:11] guy_in0xnito
+Check execLiquidation for both 
+You will get the diff
+
+
+[06/27/2024 06:19] gd.eth
+thanks
+
+{Reactions}
+👍 
+
+[06/27/2024 07:56] nihavent.
+Hello, if a lender has a credit position with forSale: true, do they also need a borrowOffer in the order book for a user to buy their credit position?
+
+
+[06/27/2024 08:08] gd.eth
+In my understanding it's not needed (if through sellCreditMarket).
+
+{Reactions}
+👍 (2) 
+
+[06/27/2024 08:13] gd.eth
+But if the lender wants to open the sale to other users via buyCreditMarket, then it is required.
+
+{Reactions}
+👍 (2) 
+
+[06/27/2024 08:13] gd.eth
+You can also check out https://docs.size.credit/technical-docs/contracts/4.-faq
+
+{Embed}
+https://docs.size.credit/technical-docs/contracts/4.-faq
+4. FAQ | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/UWDFpxJd7IcqNPGkVJ0U-2CB07
+
+
+[06/27/2024 08:24] paulbirnbaum
+Hey @aviggiano , Could you explain simply what is `assigned Collateral`, I understand the calculation behind it but don't really uderstand what it represent. 
+
+As it's the `futureValue * collateral / debt and future value > debt `.
+So by definition `Assigned Collateral > Collateral `
+
+
+[06/27/2024 08:34] benrai
+The debt here is not the debt of the position but the overall debt of the user. This means that `futureValue <= debt` and therefore `assignedCollateral <= collateral`.
+If I have two borrowPositions, each with a futureValue/debt of 100 USD, my total debt would be 200 USD the assigned collateral for one position will be 50% of all my collateral
+
+{Reactions}
+👍 (3) 
+
+[06/27/2024 08:54] iam_emptyset
+Yes, He need a borrow offer. There is a check that will revert the transaction if he doesn't have. Check BuyCreditMarket validation function probably.
+
+{Reactions}
+👍 (2) 
+
+[06/27/2024 10:16] nihavent.
+Thank you
+
+
+[06/27/2024 12:46] paulbirnbaum
+Ok, thanks I got it. 
+
+But if the borrower has only one position, 
+ `future value  =  (debt + Interest)` right? 
+Therefore the futureValue is higher than the debt and `(futureValue / debt) > 1`? 
+And so `assignedCollateral > collateral`?
+
+
+[06/27/2024 12:50] gd.eth
+futureValue is equal to the debt
+
+{Reactions}
+👍 
+
+[06/27/2024 20:41] bbl4de.xyz
+@aviggiano small typo in the docs: https://docs.size.credit/technical-docs/contracts/2.1-deposit-tokens-and-global-trackers#id-2.1-deposit-tokens
+It should be `aszUSDC` instead of `szaUSDC`
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image-32C06.png
+
+{Embed}
+https://docs.size.credit/technical-docs/contracts/2.1-deposit-tokens-and-global-trackers
+2.1 Deposit Tokens & Global Trackers | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/eumUEAEdCiIDzoJqTk8g-AB3DB
+
+
+[06/27/2024 21:18] aviggiano
+Thanks you are right, I always make this mistake. Too many lowercase letters
+
+{Reactions}
+😅 
+
+[06/27/2024 23:55] 0xrobocop
+Started a thread.
+
+
+[06/28/2024 06:02] paulbirnbaum
+What ?
+
+
+[06/28/2024 06:07] gd.eth
+https://docs.size.credit/non-technical/lending-buying-credit
+"For example, Jim lends 100 USDC at 5% interest for 12 months, so the future value of the loan is 105 USDC"
+the debt value: 100 USDC + interest = 105 USDC
+
+{Reactions}
+🫡 (4) 
+
+[06/28/2024 09:39] nave765
+```_setPrice(0.75e18);```
+Hi, i found this code in test file but i dont understand. So the priceFeed set ETH/USD price is 0.75?
+
+{Reactions}
+✅ 
+
+[06/28/2024 09:42] nave765
+So, 1 ETH equals 0.75 USD?
+
+{Reactions}
+✅ 
+
+[06/28/2024 11:49] gd.eth
+@aviggiano  ser pls check my PT whenever possible.
+
+{Reactions}
+👍 
+
+[06/28/2024 12:38] aviggiano
+Hey
+`_setPrice(1e18)` is a quick way to create tests when 1 USDC = 1 WETH, so that you can treat collateral amounts the same as borrow amounts. In production, the price will be given by Chainlink on  `PriceFeed.sol`, with 18 decimal places.
+
+
+[06/28/2024 12:48] nave765
+ooohhh, thanks sir. This is the answer i need because i was very confused
+
+
+[06/28/2024 12:48] nave765
+😂
+
+
+[06/28/2024 13:39] nave765
+debtPosition.futureValue is a borrowToken based and not collateralToken based right?
+
+{Reactions}
+✅ (3) 
+
+[06/28/2024 14:58] .tinkering (pinned)
+Updated the text on liquidateWithReplacement docs, since there was a contradiction about the borrower receiving more than the standard path. The image is still ambiguous so please ignore for now.
+
+{Reactions}
+thankyou (2) 👍 
+
+[06/28/2024 15:00] kartoonjoy
+Pinned a message.
+
+
+[06/28/2024 16:58] saba1914
+Hi everyone. Has anyone configure the import for when testing with hardhat done so successfully?
+
+
+[06/28/2024 17:20] aviggiano
+Started a thread.
+
+
+[06/29/2024 05:11] sangkim22
+Started a thread.
+
+
+[06/29/2024 10:16] 0xnbvc
+Can you please explain what are `liquidityIndex` and `liquidityIndexAtRepayment` and what are they used for?
+
+Especially in this calculation: https://github.com/code-423n4/2024-06-size/blob/8850e25fb088898e9cf86f9be1c401ad155bea86/src/libraries/actions/Claim.sol#L52-L54
+Why is the `creditPosition.credit` multiplied by the `liquidityIndex` and then divided by `liquidityIndexAtRepayment`?
+
+
+[06/29/2024 10:54] rbitbytes
+aviggiano I just DM’d you
+
+
+[06/29/2024 12:14] aviggiano
+Hello I'm back
+Will start responding now
+
+{Reactions}
+👀 
+
+[06/29/2024 12:15] aviggiano
+This is necessary so that the lender can claim their owed amount scaled byAave's variable interest. You can see more about that on the FAQ https://docs.size.credit/technical-docs/contracts/4.-faq
+
+{Embed}
+https://docs.size.credit/technical-docs/contracts/4.-faq
+4. FAQ | Size Docs
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/UWDFpxJd7IcqNPGkVJ0U-2CB07
+
+
+[06/29/2024 13:08] benrai
+DMed you 🙂
+
+
+[06/29/2024 13:30] rbitbytes
+Did you get a chance to answer my DM?
+
+
+[06/29/2024 13:34] aviggiano
+I am not sure I have received your DM. You are welcome to open a private thread
+
+
+[06/30/2024 04:13] 0xhacksmithh
+@aviggiano have a doubt, so made a PT, pls check whenever you have free time
+
+{Reactions}
+👍 
+
+[06/30/2024 05:03] thisvishalsingh
+@aviggiano pls check PT, have some doubts, ty!
+
+{Reactions}
+👍 
+
+[06/30/2024 05:20] 0xmilenov
+@aviggiano I also made PT, please check. Thank you in advance
+
+{Reactions}
+👍 
+
+[06/30/2024 08:34] nihavent.
+@aviggiano  ^ same, thank you!
+
+{Reactions}
+👍 
+
+[06/30/2024 09:14] gd.eth
+So many bugs? 😱  I guess I'll have to try harder to review.  🤣
+
+
+[06/30/2024 11:14] aviggiano
+Hi, I'm back. Responded to all threads
+
+{Reactions}
+👀 🔥 (2) 
+
+[06/30/2024 12:10] benrai
+Why do you think there are so many bugs in the code? 🤔
+
+{Reactions}
+👀 😅 
+
+[06/30/2024 12:36] gd.eth
+It's just that there are a lot of auditors confirming their issues with the sponsor of contest via private thread, which gives me the impression that they're all confirming bugs with the sponsor. 🥹
+
+
+[06/30/2024 12:36] gd.eth
+Forget it, it seems to me that when there are a lot of people communicating with sponsors, it creates a tense contest atmosphere.🤣
+
+
+[06/30/2024 13:04] nave765
+Understandable lol
+
+
+[06/30/2024 13:04] nave765
+😂
+
+
+[06/30/2024 13:31] gd.eth
+Now I'm gonna ask a question.🥹 
+Is it allowed to withdraw or deposit collateral when a borrower's debt is liquidated due to overdue repayment?
+
+
+[06/30/2024 13:35] nave765
+yes, it's allowed
+
+
+[06/30/2024 13:36] nave765
+But small portion of token will goes to the liquidator and protocol treasury after the liquidation happening
+
+{Reactions}
+thankyou (3) 👍 
+
+[06/30/2024 19:28] benrai
+Just because someone is speaking with the sponsor directly this doesn’t mean not mean that issues are confirmed… believe me 😅
+
+{Reactions}
+🤣 💯 
+
+[06/30/2024 21:46] fastchecker_27
+Hello everyone? There is something strange about Renzo contest that have already passed. Where can I see the storage of the Renzo contest of "30 Apr 11:00 PM - 8 May"?
+
+
+[07/01/2024 02:24] sohrabhind
+I started learning Solidity one month ago. While I am able to understand the code of the Size protocol, I am currently unable to identify any issues. What should I do?
+
+
+[07/01/2024 02:28] gd.eth
+read this https://twitter.com/agfviggiano/status/1804228156380914051
+
+{Embed}
+https://twitter.com/agfviggiano/status/1804228156380914051
+Antonio Viggiano (@agfviggiano) on X
+This is interesting!
+
+It looks like @SizeCredit's audit competition on @code4rena gained a lot of attention, which might be scary and make people give up. Others see this as an opportunity to stay ahead of the competition and score big bucks.
+
+Here are my 2 cents:
+Twitter
+
+
+[07/01/2024 02:45] gd.eth
+Hi, I'm trying to figure out what's going on with scaledAmount and unscaled in borrowAtoken, I'm not familiar with aave.
+Is borrowAtoken scaledAmount or unscaledAmount when doing credit and cash trading? 🙏
+
+
+[07/01/2024 03:30] zarkk01
+@aviggiano check pt, thank you 👍🏻
+
+{Reactions}
+👍 
+
+[07/01/2024 03:51] 0xstalin
+unscaled amount, whenever transferring borrowAToken from CreditBuyer to CreditSeller, the `transferFrom()` of the `NonTransferrableScaledToken` contract is used.
+Check this function and you'll understand why is unscaled amount
+
+{Reactions}
+👍 (2) thankyou 
+
+[07/01/2024 08:23] tutkata
+Keep on grinding until it gives you results. Try to do also old audits and then check which issues you found and which you haven't.
+
+
+[07/01/2024 10:24] viraz4331
+@aviggiano can you check pt when you get time
+thanks
+
+{Reactions}
+👍 
+
+[07/01/2024 11:24] tim_peng.
+Started a thread.
+
+
+[07/01/2024 12:01] aviggiano
+hello I'm back
+will respond to threads rn
+
+{Reactions}
+🔥 (5) 🌟 (2) 
+
+[07/01/2024 12:02] aviggiano
+Started a thread.
+
+
+[07/01/2024 12:02] aviggiano
+Started a thread.
+
+
+[07/01/2024 12:03] aviggiano
+Started a thread.
+
+
+[07/02/2024 11:55] aviggiano
+hello I'm back
+will respond to questions now
+
+{Reactions}
+🔥 (2) 
+
+[07/02/2024 13:08] gd.eth
+@aviggiano ser please check pt when you get time, thanks!
+
+{Reactions}
+👍 
+
+[07/02/2024 13:09] flamenco_rojo
+Hey @aviggiano left you a PT thanks
+
+{Reactions}
+👍 
+
+[07/02/2024 14:04] aviggiano
+Only ~6h left
+I'm looking forward to reading all your reports soon!
+
+{Reactions}
+🎉 (17) hearteyesshark 
+
+[07/02/2024 14:14] alix40
+Amazing work on the protocol, really had fun during this contest!
+
+{Reactions}
+🔥 (5) 
+
+[07/02/2024 14:20] gd.eth
+Very clean and solid code, amazing modular structure, it's hard to find bugs 🤣
+
+
+[07/02/2024 14:20] gd.eth
+I learned a lot from this contest. 🚀
+
+{Reactions}
+🚀 (8) 
+
+[07/02/2024 14:54] nfmelendez
+Learnt a lot from Size, single state variable  was mind blowing 🙂
+
+{Reactions}
+👍 (6) 💯 (2) 
+
+[07/02/2024 15:03] justbuks
+is it okay if we use information as a result of an answer from @aviggiano as premise for a report
+
+
+[07/02/2024 15:57] .tinkering
+@c4
+
+
+[07/02/2024 16:20] iam_emptyset
+It's really a very clean and simple to understand code base, You guys did a good job.
+
+{Reactions}
+🔥 (2) 
+
+[07/02/2024 16:58] mylifechangefast.eth_70767
+All my scenarios I thought would be valid turned out to be invalid😅🤣
+
+{Reactions}
+🤣 
+
+[07/02/2024 16:59] mylifechangefast.eth_70767
+I Will  try use size concept to understand another protocol🤔
+
+
+[07/02/2024 17:20] justbuks
+@Gao @aviggiano i messaged you in pt 
+pls reply as soon as possible
+
+{Reactions}
+👍 
+
+[07/02/2024 18:16] zarkk01
+me too @aviggiano
+
+{Reactions}
+👍 
+
+[07/02/2024 18:34] lightoasis
+Hi @aviggiano  same here.
+
+{Reactions}
+👍 
+
+[07/02/2024 19:08] aviggiano
+Less than 1h everyone!
+
+https://tenor.com/view/bills-ugh-gif-9811803164280522639
+
+{Embed}
+https://tenor.com/view/bills-ugh-gif-9811803164280522639
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/bills-ugh-BC8FE.png
+
+{Reactions}
+hyperfastparrot (6) ohno (2) 
+
+[07/02/2024 19:53] sp1cymeatball
+Place your bets. I say 1.1k findings.
+
+{Reactions}
+👀 (3) 🔥 (2) 🙃 (3) 
+
+[07/02/2024 19:59] jaimegm_
+that many? I am thinking of one with a lot of dups
+
+
+[07/02/2024 20:01] aviggiano
+c'est fini
+good luck everyone
+thanks for participating!!!!!!
+
+https://tenor.com/view/cat-changing-the-clock-changing-the-time-kitty-cat-cute-gif-17202806
+
+{Embed}
+https://tenor.com/view/cat-changing-the-clock-changing-the-time-kitty-cat-cute-gif-17202806
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/cat-changing-the-clock-changing-the-time-E886B.png
+
+{Reactions}
+thankyou (4) 
+
+[07/02/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Size** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Feel free to ping a Civics-Admin if you have questions along the way!
+
+{Reactions}
+C4Keycap (12) 
+
+[07/02/2024 20:51] pascal9476
+A very amazing design choice
+
+
+[07/02/2024 20:54] mrmorningstar96
+so does anyone know how many findings were submitted?
+
+
+[07/02/2024 21:16] benrai
+694 submissions
+
+{Reactions}
+😱 (3) 
+
+[07/02/2024 21:38] 0xstalin
++ 153 on the findings repo
+
+
+[07/02/2024 23:38] nave765
+Goodluck guys:chefskiss:
+
+
+[07/03/2024 00:16] tamayonft
+Gg to eveyona, specially to @aviggiano. Thanks so much for the help
+
+{Reactions}
+🔥 
+
+[07/03/2024 00:16] tamayonft
+Amazing codebase 👍
+
+
+[07/03/2024 00:18] tamayonft
+Why some submission go directly to the findings repo?
+
+
+[07/03/2024 01:01] gd.eth
+Where can I see all reports? 👀
+
+
+[07/03/2024 01:23] gd.eth
+Waiting for results
+https://tenor.com/view/kermit-torture-angry-gif-4896920
+
+{Embed}
+https://tenor.com/view/kermit-torture-angry-gif-4896920
+This is torture!!
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/kermit-torture-00FE5.png
+
+
+[07/03/2024 01:49] tamayonft
+Wen results?
+
+{Reactions}
+😂 
+
+[07/03/2024 01:49] tamayonft
+Xd just kidding 😂
+
+
+[07/03/2024 01:51] .tinkering
+c4 team said it could take up to 30 days
+
+Size may launch before then, so stay tuned in case a bounty is pushed on Immunefi for the live app before the findings are all validated 👀
+
+{Reactions}
+code4rena (3) 
+
+[07/03/2024 04:07] benrai
+What is the thing with the findings repo again?
+
+
+[07/03/2024 04:18] 0xstalin
+That’s like the final repo, validators will determine which reports from the validation’s repo are moved to the findings repo so judge and sponsor validates/judge the reports only from that repo
+
+{Reactions}
+👍 
+
+[07/03/2024 04:19] benrai
+Ok, thanks for the clarification
+
+
+[07/03/2024 04:38] alix40
+800 submissions, Is actually a lot and I think participation is huge, knowing that the code is clean and there wasn't a lot of low hanging fruits.
+
+{Reactions}
+😱 (2) 
+
+[07/03/2024 04:40] gd.eth
+🥹 Maybe I missed a lot of findings.
+
+
+[07/03/2024 04:43] .nnez
+Yeah, the number of submisisons is getting higher lately in competition.
+
+{Reactions}
+4739_Skeletor (2) 
+
+[07/03/2024 04:48] gd.eth
+However, after communicating with the sponsor some possible attack vectors were confirmed to be invalid. 
+I didn't think it was necessary to submit any more, and in the end I only submitted my confirmed results.
+
+
+[07/03/2024 04:48] gd.eth
+I didn't expect so many submissions. 🤣
+
+
+[07/03/2024 04:49] alix40
+I think if the code was low quality, with the number of people participated we would have had 1.5 k submissions xD. So 800 are the submissions and probably have a lot of duplicates
+
+
+[07/03/2024 04:51] gd.eth
+Wow, that's a lot of work.
+
+
+[07/03/2024 07:20] pascal9476
+Is there a way to know if your finding has moved from validator repo to main repo
+
+
+[07/03/2024 07:21] .nnez
+Only if you have SR role
+
+
+[07/03/2024 07:26] infectedfuture
+yeah e.g Dyad was 400 sloc and had +1.2k submission for a 7 day contest haha ||(I haven't said anything about the code quality ok? :goose: )||
+
+{Reactions}
+4739_Skeletor (4) 
+
+[07/03/2024 08:24] nihavent.
+Can someone pls link the findings repo?
+
+
+[07/03/2024 08:27] infectedfuture
+https://github.com/code-423n4
+you need to be SR (role) to see it, if its the case you will see it in the "repositories" list
+
+
+[07/03/2024 08:50] nihavent.
+I see, thank you 🙏
+
+{Reactions}
+🙏 
+
+[07/03/2024 09:34] liffidmonky
+In my opinion there were 2 issues that are really "easy-to-find", 2 more that were a bit tricky and 1 tricky+  xd
+
+{Reactions}
+👀 (4) 
+
+[07/03/2024 09:35] liffidmonky
+@aviggiano can you say if a lot of people were asking the same questions or having similar ideas?
+
+
+[07/03/2024 10:10] benrai
+Apparently over 170 people submitted issues
+
+{Reactions}
+4739_Skeletor (4) 😵 (3) c4ship 
+
+[07/03/2024 11:52] nfmelendez
+The protocol complexity is similar zivoe or exactly and more less the report numbers Are the same
+
+
+[07/03/2024 13:43] asilver_eth
+so everyone found the same things then 🙂
+
+{Reactions}
+😂 (2) 
+
+[07/03/2024 14:32] asilver_eth
+@aviggiano 
+was the caps library added after the last audit ?
+
+
+[07/03/2024 14:38] aviggiano
+no, it existed before
+maybe it had a few changes, but nothing major
+
+
+[07/03/2024 14:49] asilver_eth
+Wow 😯 
+im kinda shocked cause one of the " easy-to-find" criticals was there
+
+
+[07/03/2024 15:10] zkillua.dev
+Kindly share it here if possible.
+
+
+[07/03/2024 15:12] zkillua.dev
+I'm unable to read anything related to submissions. Is there anything i should do to get the required priviliges.
+
+
+[07/03/2024 15:25] asilver_eth
+not sure if that isnt against the rules 
+ill dm you
+
+
+[07/03/2024 15:41] .nnez
+Get SR role
+
+
+[07/03/2024 17:13] nfmelendez
+i don't have SR role, now i have to sit and wait for a month for the results 🙂
+
+
+[07/03/2024 17:25] tamayonft
+Why are some issue in the findings repo ?
+
+
+[07/03/2024 18:17] nfmelendez
+depends on a ratio,  for auditors with good valid ratio go directly to findings, the others go to the validate repo
+
+
+[07/03/2024 18:41] _elhaj_
+:4739_Skeletor:  This  scaring me as it's my first C4 audit ..do auditors without SR role have the chance to escalate?!
+
+
+[07/03/2024 18:42] ali_shehab.
+No
+
+
+[07/03/2024 18:42] ali_shehab.
+You need SR role
+
+
+[07/03/2024 18:42] _elhaj_
+:4739_Skeletor: :4739_Skeletor: :4739_Skeletor:
+
+{Reactions}
+4739_Skeletor (5) 
+
+[07/03/2024 18:49] nfmelendez
+One shoot 🙂
+
+{Reactions}
+😅 
+
+[07/04/2024 03:57] engine_ros
+how to SR role ?
+
+
+[07/04/2024 06:55] pataroff
+https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+Security Researcher role (formerly +backstage wardens) | Code4rena
+
+
+[07/04/2024 07:02] t1moh
+You can afford to hire escalatooor :4739_Skeletor:
+
+{Reactions}
+🤣 (7) 
+
+[07/04/2024 10:05] engine_ros
+thanks for your help
+
+{Reactions}
+🫡 
+
+[07/04/2024 13:03] infectedfuture
+you can ask someone to escalate for you its allowed
+
+
+[07/04/2024 13:04] infectedfuture
+but you cannot participate yourself (contrary to sherlock)
+
+
+[07/04/2024 15:32] _elhaj_
+cool , i'll try this
+
+
+[07/05/2024 00:50] gd.eth
+No worries, I'm sure there will be SR submissions with the same findings as mine. 😌
+
+
+[07/05/2024 04:50] sean3416
+So, at least 3 contests with solid findings huh? This is the 1st one on C4 I put in some serious amount of time. Hope to get the role soon. Not feeling good being blind.
+
+
+[07/05/2024 12:05] tamayonft
+Oh bro thats painful
+
+
+[07/05/2024 19:17] justbuks
+yeah but we dont even know the state of our findings until judging is done
+
+
+[07/06/2024 17:03] elvisvan
+holy shit
+
+
+[07/06/2024 17:06] elvisvan
+reminds me of this tweet
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/SmartSelect_20240707_000550_Discord-B4924.jpg
+
+{Reactions}
+☠️ (7) 😂 (4) 
+
+[07/08/2024 01:26] mylifechangefast.eth_70767
+That's more than 1 word👀😅
+
+
+[07/08/2024 13:16] squilliamx
+When can we expect these results?
+
+
+[07/08/2024 13:17] .nnez
+At least a month
+
+
+[07/08/2024 14:42] justbuks
+at LEAST 🥲
+
+{Reactions}
+😂 (4) 
+
+[07/09/2024 09:05] cloudellie
+It's against the rules to discuss publily. Thank you for exercising caution in discussing vulnerabilities.
+
+
+[07/09/2024 15:45] kalogerone
+*OK OK OK I need the results to be released. I cant take this anymore. Every day I am checking the announcement and there is nothing. Every day, I check the announcement, no announcement. I cant take this anymore man, I am over addicted to the contests, by a lot. It is what it is but I need the results to be released ALREADY. Can judges do something?*
+
+{Reactions}
+😂 (9) 
+
+[07/10/2024 03:07] sean3416
+https://tenor.com/view/scrunchy-dog-awkward-smile-awkward-dog-awkward-smile-gif-9213649634949817456
+
+{Embed}
+https://tenor.com/view/scrunchy-dog-awkward-smile-awkward-dog-awkward-smile-gif-9213649634949817456
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/scrunchy-dog-awkward-smile-C4269.png
+
+{Reactions}
+💀 (4) 
+
+[07/10/2024 21:57] liffidmonky
+Who wants some ice cream while waiting? 🍦🍨 we got in cup or cone
+
+{Reactions}
+🍦 (7) 
+
+[07/12/2024 16:36] justbuks
+How far gone with judging
+
+
+[07/13/2024 03:23] tamayonft
+Are validators still working right?
+
+
+[07/13/2024 06:23] .nnez
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/image0-12131.gif
+
+
+[07/15/2024 18:15] tamayonft
+Hey question is there a way to see some feedback in the validation repo?
+
+
+[07/15/2024 18:35] justbuks
+How is the process going
+Fast?
+
+
+[07/15/2024 19:01] takarez
+as in validators feedback?
+
+
+[07/15/2024 19:09] tamayonft
+yes sr
+
+
+[07/15/2024 19:09] tamayonft
+i remenber one audit where i can see i excel sheet the comment about each issue
+
+
+[07/15/2024 19:09] tamayonft
+of the validator
+
+
+[07/15/2024 19:09] tamayonft
+validators
+
+
+[07/15/2024 19:09] tamayonft
+is not like that now?
+
+
+[07/15/2024 19:10] tamayonft
+if validator does not pick up your findings you have to double check if is a duplicate missed or something
+
+
+[07/15/2024 19:16] takarez
+there's an explantion on how to check.
+
+
+[07/15/2024 19:16] takarez
+one sec
+
+
+[07/15/2024 19:17] takarez
+there u go https://discord.com/channels/810916927919620096/976603323450941440/1260552184962220105
+
+
+[07/15/2024 20:36] tamayonft
+Hey @takarez thank so much
+
+
+[07/15/2024 20:36] tamayonft
+Still not see any comment about my findings
+
+
+[07/17/2024 05:17] .nnez
+It's in the csv file.
+
+
+[07/18/2024 18:50] justbuks
+reagarding actual judging 
+is it moving fast ie are we likely to have results soon
+
+{Reactions}
+👀 (2) 
+
+[07/18/2024 19:48] takarez
+its in PJQA now.
+
+
+[07/18/2024 19:56] saba1914
+how to ask him the escalation?
+
+
+[07/18/2024 20:00] takarez
+as in u mean, how to escalate ur issue?
+
+
+[07/18/2024 20:00] saba1914
+hi there. yes
+
+
+[07/18/2024 20:01] takarez
+this may help  https://docs.code4rena.com/roles/certified-contributors/validators#miscellaneous
+
+{Reactions}
+🔥 
+
+[07/18/2024 20:05] saba1914
+ok asking any validator for escalation our issue plz  auditing solo here 🙏
+
+
+[07/18/2024 20:10] takarez
+the time has passed i believe.
+
+{Reactions}
+🔥 (2) 
+
+[07/18/2024 20:43] saba1914
+tnx 4 ur understanding and 4 ur patience
+
+
+[07/18/2024 22:18] justbuks
+PJQA?
+
+
+[07/18/2024 22:18] justbuks
+high and med judging is done?
+
+
+[07/19/2024 12:59] p_laksmana
+Same question
+
+
+[07/19/2024 13:22] thebrittfactor
+PJ QA has closed and the judge is reviewing all comments.
+
+{Reactions}
+thankyou (2) 
+
+[07/19/2024 13:58] liffidmonky
+What does PJ mean if I might ask
+
+
+[07/19/2024 14:05] _3doc_
+means "post judging", you find more info here -> https://code4rena.notion.site/SR-formerly-backstage-Guidelines-06d1073540994cc08937f721c2951b0f
+
+{Reactions}
+thankyou (2) 
+
+[07/19/2024 18:28] asilver_eth
+so as early as next week then
+
+
+[07/21/2024 13:55] tamayonft
+Hey @hansfriese  I don't want span the QA with this question I saw that you put 👍 in my qa  but not all of my QA issues was reviewed? That was on purpose?
+
+
+[07/21/2024 14:10] hansfriese
+I have just added a comment, assuming you meant #397.
+
+
+[07/21/2024 14:21] tamayonft
+Also #152
+
+
+[07/21/2024 14:21] tamayonft
+Thanks so much
+
+
+[07/21/2024 14:25] hansfriese
+Added a comment already on [your submission](https://github.com/code-423n4/2024-06-size-validation/issues/121)
+
+
+[07/21/2024 14:26] tamayonft
+Hey thank so much, further discussion I will do it in the qa I just think that you missed or something so I wanted know thank so much
+
+{Reactions}
+👍 
+
+[07/21/2024 14:46] saba1914
+have you see any finding for arabgodx? suspect 2 of 2 will sit inside validation do to warden rank but at least 1 qualify for atleast Q/A at very least
+
+{Reactions}
+🙏 (3) 👀 
+
+[07/21/2024 17:00] saba1914
+i.e one of those concern i believe regarded the `BuyCreditMarket` or sell market functions in the Size Protocol and its lack of verification for whether the borrower and lender are the same address, if this could indeed be intentional, depending on the design philosophy of the protocol. Some protocols might allow such interactions for specific reasons, such as enabling more flexible liquidity provisions or internal balancing mechanisms. However, it's also possible that this could be an oversight, potentially leading to undesirable behaviors like self-dealing or manipulation
+
+1/2 findings for arabgodx and few other warden i believe is anyone able to verify it inside this PJQA ? Saw someone banish some of this finding for low info/qa and some will awarded duplicate medium finding if the issue is wrong parameter or non protocol fault
+
+{Reactions}
+👀 
+
+[07/22/2024 07:52] iam_emptyset
+@hansfriese Can you please check my submission (Auwal Balarabe or iam_emptyset)
+
+
+[07/22/2024 11:26] 0xarno
+Hello, Hansfriese. Will my issues move to the findings repo?
+
+
+[07/22/2024 11:56] samuraii77
+the valid ones are already moved
+
+
+[07/22/2024 12:01] iam_emptyset
+Hi, can you check the status of my submission please?
+
+
+[07/22/2024 13:34] yoona_yay_80694
+correct me if im wrong but, i thought c4 moved towards only awarding the top 3 QA reports? if that is the case, what is the purpose of giving QA reports grade a/grade b etc?
+
+
+[07/22/2024 14:32] thebrittfactor
+You're correct that we're only awarding the top 3 QA reports, marked by 1st/2nd/3rd place. However, in the rare event there are no H/Ms, the grades will be used to score and award (unless otherwise stated). More details [here](https://docs.code4rena.com/awarding/incentive-model-and-awards/curve-logic#if-there-are-no-valid-hm-findings).
+
+
+[07/22/2024 15:18] kalogerone
+I think it’s about time to start asking the real questions
+
+
+[07/22/2024 15:18] kalogerone
+https://tenor.com/view/harrys-hammer-club-harry-hammer-club-wen-gif-26315615
+
+{Embed}
+https://tenor.com/view/harrys-hammer-club-harry-hammer-club-wen-gif-26315615
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/harrys-hammer-club-harry-E818B.png
+
+{Reactions}
+😂 (7) 
+
+[07/22/2024 20:52] 0xstalin
+https://tenor.com/view/not-today-samus-paulicelli-66samus-maybe-another-day-next-day-gif-22335791
+
+{Embed}
+https://tenor.com/view/not-today-samus-paulicelli-66samus-maybe-another-day-next-day-gif-22335791
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/not-today-samus-paulicelli-E4477.png
+
+
+[07/22/2024 22:34] kalogerone
+https://tenor.com/view/nich-bad-nft-gif-23770085
+
+{Embed}
+https://tenor.com/view/nich-bad-nft-gif-23770085
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/nich-bad-nft-DA4CC.png
+
+{Reactions}
+😂 
+
+[07/23/2024 21:29] thebrittfactor
+🤑 🎉  Awards for **Size**:
+
+$36,381.06 USDC » @mt030d 
+$29,203.34 USDC » @KupiaSec 
+$12,302.99 USDC » @adeolu 
+$11,847.57 USDC » @elhaj 
+$10,308.60 USDC » @VAD37 
+$8,385.17 USDC » @pkqs90 
+$7,206.05 USDC » @serial-coder 
+$7,182.82 USDC » @ether_sky 
+$6,843.77 USDC » @hyh (offline) 
+$4,142.60 USDC » @0xpiken 
+$3,889.72 USDC » @samuraii77 
+$3,146.74 USDC » @Alix40 
+$2,548.03 USDC » 0xAlix2 (@a_kalout and @ali_shehab) 
+$2,052.63 USDC » @0xhacksmithh 
+$1,963.97 USDC » @bin2chen 
+$1,903.96 USDC » @m4k2 
+$1,863.16 USDC » @stakog 
+$1,859.73 USDC » @AMOW 
+$1,628.62 USDC » @gesha17 
+$1,530.63 USDC » Shield (@Dravee, @0xA5DF, @Viraz and @Udsen) 
+$1,489.03 USDC » @grearlake 
+$1,478.06 USDC » @0xStalin 
+$1,436.57 USDC » @ilchovski 
+$1,399.14 USDC » @BenRai 
+$1,394.76 USDC » @Apollo 
+$1,252.78 USDC » @almurhasan 
+$1,247.08 USDC » @Bob 
+$985.55 USDC » @dhank 
+$918.91 USDC » @zzebra83 
+$842.57 USDC » @trachev 
+$726.81 USDC » @inzinko 
+$629.72 USDC » @zarkk01 
+$607.38 USDC » @Honour 
+$533.46 USDC » @said 
+$526.07 USDC » @3n0ch 
+$392.38 USDC » @zhaojohnson 
+$382.60 USDC » @asilver_eth 
+$317.29 USDC » @ayden 
+$307.12 USDC » @JCN 
+$247.70 USDC » @SpicyMeatball 
+$205.40 USDC » @Brenzee 
+$169.67 USDC » @0xRobocop 
+$146.36 USDC » @Nyx 
+$78.98 USDC » @DanielArmstrong 
+$78.98 USDC » @carlos__alegre 
+$72.81 USDC » @0xJoyBoy03
+
+
+[07/23/2024 21:30] thebrittfactor
+$65.27 USDC » @asui 
+$59.10 USDC » @Kalogerone 
+$59.10 USDC » @gd 
+$29.52 USDC » @Lin 
+$23.37 USDC » @Jorgect 
+$19.93 USDC » @infect3d 
+$17.82 USDC » @iam_emptyset 
+$17.14 USDC » @BoltzmannBrain 
+$13.76 USDC » @0xanmol 
+$13.76 USDC » @Arno 
+$13.76 USDC » @radin100 
+$13.71 USDC » @0x04bytes 
+$9.66 USDC » Sentryx (@flacko and @buggsy) 
+$9.60 USDC » @shaflow2 
+$6.22 USDC » @0xRstStn 
+$6.22 USDC » @Bigsam 
+$6.22 USDC » @Nihavent 
+$6.22 USDC » @zanderbyte 
+$6.17 USDC » @Rhaydden 
+$6.17 USDC » @lanrebayode77 
+$6.17 USDC » @unknown-BL4NK 
+$4.46 USDC » @prapandey031 
+$3.49 USDC » MidgarAudits (@VanGrim and @EVDoc) 
+$3.49 USDC » @heeze 
+$3.49 USDC » @Berndt 
+$3.43 USDC » @0xrafaelnicolau 
+$3.43 USDC » Inspex (@jokopoppo, @DeStinE21, mimic_f, Rugsurely, ErbaZZ, @rxnnxchxi and doggo) 
+$3.43 USDC » @evmboi32 
+$3.43 USDC » @nnez 
+$3.43 USDC » @rscodes 
+$0.05 USDC » @0xBugSlayer 
+$0.05 USDC » @AlexCzm 
+$0.05 USDC » @AlexMilkov 
+$0.05 USDC » Decipher100Eyes (@tankjadu, @Mansub-Song, @ssups and @Sang) 
+$0.05 USDC » @Nave 
+$0.05 USDC » @ParthMandale 
+$0.05 USDC » @Tychai0s 
+$0.05 USDC » @Zkillua 
+$0.05 USDC » @iamandreiski 
+$0.05 USDC » @max10afternoon 
+$0.05 USDC » @nfmelendez 
+$0.05 USDC » @supersizer0x
+
+
+[07/23/2024 21:31] thebrittfactor
+🏁 Findings summary
+-------------------------------------
+4 High risk findings
+13 Med risk findings
+193 wardens contributed
+
+Top Hunter: mt030d
+Top Gatherer: KupiaSec
+Top QA report: ether_sky
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+
+[07/23/2024 21:32] olanre_waju
+congrats @adeolu 🫡
+
+{Reactions}
+❤️ (5) 💯 🫡 
+
+[07/23/2024 21:39] m4k2
+gg wp
+
+
+[07/23/2024 21:48] nfmelendez
+Good job to everyone. I got 0.05 🙂
+
+
+[07/23/2024 21:48] liffidmonky
+where can I check the reasons if any of my findings was invalidated?
+
+{Reactions}
+👍 
+
+[07/23/2024 21:58] 0xhacksmithh
+I believe you can't, those are only accessible backstage wardens
+
+
+[07/23/2024 22:32] ubl4nk
+I think my findings are not even moved by validators to judge repo.
+
+Very unfair judging mechanism, i won't participate in any contest anymore in Code4rena.
+
+{Reactions}
+🙏 (2) 
+
+[07/23/2024 22:45] bigsam0831
+Keep believing bro. double the hard work, good things take time
+
+{Reactions}
+❤️ 
+
+[07/23/2024 23:03] cloudellie
+Both validation & findings repos are typically made public when the report is published.
+
+
+[07/23/2024 23:06] ubl4nk
+I spent ~50 hours on this codebase and 3/4 my findings was confirmed by sponsor, now i see only 1 Med is accepted.
+
+I don't know what is happened during the judgements.
+
+It is not all about the hardworking, hardworking will be useless in an unfair situation (where you can't even escalate your issue without backstage).
+
+{Reactions}
+✅ (5) 
+
+[07/23/2024 23:17] 18a6
+@elhaj legend
+
+{Reactions}
+❤️ (4) 🫡 (2) 🔥 (2) 
+
+[07/23/2024 23:31] 18a6
+doesnt even have SR role yet wow
+
+
+[07/24/2024 01:52] gd.eth
+Wow, you guys are amazing.
+Looking forward to the report.  🔥
+
+
+[07/24/2024 02:25] 0xrobocop
+Congrats to the winners!
+
+
+[07/24/2024 02:52] tamayonft
+Hey you are not the only one just keep grinding bro
+
+{Reactions}
+✅ (3) 
+
+[07/24/2024 04:08] gd.eth
+There are a lot of senior wardens who miss some bugs.
+I'm curious as a high level auditor what types of bugs they miss and how to avoid them?
+
+
+[07/24/2024 05:06] samuraii77
+these reward calculations didn't do me a favour 🥲
+
+
+[07/24/2024 05:17] velislav4o4298
+The same 🥲
+
+
+[07/24/2024 06:36] zzebra83
+senior wardens dont miss the bugs, the bugs miss them sir.
+
+{Reactions}
+🤣 (2) 
+
+[07/24/2024 06:43] afriauditor
+Congrats @adeolu
+
+{Reactions}
+❤️ 
+
+[07/24/2024 07:35] zarkk01
+Congrats to everyone, do we know when the report will be out?
+
+
+[07/24/2024 08:18] liffidmonky
+Complaining in unfair situations is part of the grinding imo. Idk if this one is btw xd Im just saying
+
+
+[07/24/2024 09:16] forgebyola
+It's not. Its just a waste of time
+
+{Reactions}
+👀 
+
+[07/24/2024 10:00] mahdi9606
+You're right, it's not fair that some people can't escalate their findings
+
+{Reactions}
+👍 
+
+[07/24/2024 10:13] mylifechangefast.eth_70767
+
+
+{Stickers}
+Code4rena - ARCHIVE-Q2-2024 - size-jun10 [1247222125543162038].txt_Files/819128604311027752-30378.json
+
+
+[07/24/2024 10:13] mylifechangefast.eth_70767
+@zhaojohnson @adeolu welldone
+
+{Reactions}
+❤️ (2) 
+
+[07/24/2024 10:42] ivanchoveka
+Grats to everyone! I am also interested when is the report coming out?
+
+
+[07/25/2024 17:19] petro_1912
+@aviggiano
+I participated in this contest, and submitted 5 findings total, but I can't see my account in leaderboard.
+What's happening?
+
+{Reactions}
+😂 (2) 
+
+[07/25/2024 17:20] petro_1912
+Even if all findings are invalid, I'll still be able to see my account on the leaderboard, right?
+
+
+[07/25/2024 17:23] petro_1912
+I haven't backstage access yet. Anyone can help me? 
+my account is petro_1912 on the C4.
+
+
+[07/25/2024 17:33] _karanel
+If all are invalid, your name won't be on leaderboard
+
+{Reactions}
+👆 
+
+[07/25/2024 20:01] .tinkering
+Hey all, a big thanks on behalf of the Size team. Thank you so much for all the hard work and great questions! Cheers 🍻
+
+{Reactions}
+❤️ (6) 🇸 🇮 🇿 🇪 🚀 (2) 
+
+[07/25/2024 20:11] nfmelendez
+Thanks Size i learnt a lot from the protocol, i only made 0.05 USDC but got the SR role 🙂
+
+{Reactions}
+🙏 (3) 🔥 
+
+[07/31/2024 15:33] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted on Friday, 09 August 2024. Please make sure to grab anything you might need before then.
+
+
+[07/31/2024 18:34] unclejeff4407
+Hard work will get you the SR role
+
+
+[08/08/2024 11:29] squilliamx
+I don’t have the SR role, where can I find the final report?
+
+
+[08/08/2024 11:37] olanre_waju
+go check size website, they seem to have released it.
+
+
+[08/08/2024 12:27] blockchain555
+where?
+
+
+[08/08/2024 21:02] itsmetechjay
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 756 message(s)
+==============================================================
